@@ -1,0 +1,24 @@
+{% load static %}
+ <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ 
+ <body>
+    {% include "includes/navbar.html"%}
+    <br><br>
+    {% include "includes/carousel.html"%}
+    {% block body %}
+    {% endblock body %}
+    {% include "includes/footer.html" %}
+ </body>
+ </html>
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script src="{% static 'javascript/jquery-3.2.1.min.js'%}"></script>
+<script src="{% static 'javascript/bootstrap.min.js'%}"></script>
+<script src="{% static 'javascript/bootstrap.js'%}"></script>
