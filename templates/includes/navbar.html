@@ -5,9 +5,10 @@
     background-color:black;
   }
   .logo{
-    height:4%;
+    height:1em;
     padding-right:15%;
     padding-left:5%;
+    position: relative;
   }
   .custom-icon{
     height:4%;
@@ -18,7 +19,7 @@
   }
 </style>
 <nav class="navbar navbarCollapse navbar-toggleable-md navbar-inverse fixed-top  navbar-custom">
-    <a class="navbar-brand" href="{% url 'index' %}"><img class = "img-responsive logo" src="{% static 'images/GGK_logo-2.png' %}"></a>
+    <a class="navbar-brand" href="{% url 'index' %}"><img class = "logo" src="{% static 'images/GGK_logo-2.png' %}"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
