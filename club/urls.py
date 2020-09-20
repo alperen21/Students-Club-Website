@@ -19,5 +19,6 @@ from article import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.Index,name="index")
+    path('',views.Index,name="index"),
+    path('test',views.test,name="test"),
 ]

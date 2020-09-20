@@ -1,0 +1,88 @@
+{% load static %}
+
+<style>
+    .image-container{
+        display:flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    .image-box{
+        flex:10;
+    }
+
+    .GGK-logo{
+        margin: auto;
+        top: 150;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .l-box{
+        flex:15;
+    }
+    .r-box{
+        flex:10;
+    }
+
+    .text-container{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .intro-text{
+        text-align: center;
+        color: white;
+    }
+
+    .text-container-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .text-box-2{
+        width: 30%;
+        background-color: darkgray;
+    }
+
+    .card-1{
+        background-color:grey;
+        padding:5%;
+    }
+
+
+</style>
+<div class="card-1">
+    <div class="image-container">
+        <div class="l-box"></div>
+        <div class="image-box">
+            <img src="{% static 'images/GGK_logo-5.png' %}" class="GGK-logo">
+        </div>
+        <div class="r-box"></div>
+    </div>
+    <br>
+    <div class="text-container-1">
+        <div class="text-box-1">
+            <h1 class="intro-text">Genç Girişimciler Kulübü</h1>
+        </div>
+        <div class="text-box-1">
+            <h3 class="intro-text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio.</h3>
+        </div>
+    </div>
+    
+    <div class="text-container-2">
+        <div class="text-box-2">
+            <h3 class="intro-text">Neden GGK?</h3>
+            <p class =intro-text> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctioLorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctioLorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio</p>
+        </div>
+        <div class="text-box-2">
+            <h3 class="intro-text">Aile Sistemi</h3>
+            <p class =intro-text> Lorem, ipsum dolor sit a Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctiomet consectetur adipisicing elit. Quisquam, distinctioLorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctioLorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio</p>
+        </div>
+        <div class="text-box-2">
+            <h3 class="intro-text">Etkinlikler</h3>
+            <p class =intro-text> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctioLorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctioLorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio</p>
+        </div>
+    </div>
+</div>
+
