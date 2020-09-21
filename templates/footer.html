@@ -1,0 +1,82 @@
+{% load static %}
+<style>
+    .footer{
+        background-color: #222222;
+        color:gainsboro;
+        height:400px;
+        position:relative;
+        background-image: url("{% static 'images/pattern3.jpg' %}");
+        background-size:cover;
+    }
+    .footer-content{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding:5%;
+
+    }
+    .footer .footer-bottom{
+        background-color: black;
+        color:darkgrey;
+        height:40px;
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        right:0px;
+        padding-top: 0.5%;
+    
+    }
+
+    .footer-box{
+        flex-basis: 30%;
+        padding-left:5%;
+        padding-right:5%;
+
+    }
+    .question-list{
+        list-style:none;
+        padding: 0;
+        margin: 0;
+    }
+    .bottom-text{
+        text-align: center;
+    }
+    .list-item:hover{
+        color:white;
+    }
+    .list-item:active{
+        color:maroon;
+    }
+
+    .footer-text{
+        color:#c0c0c0;
+    }
+</style>
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-section about footer-box">
+            <h3 class="footer-text">Genç Girişimciler Kulübü</h3>
+            <br>
+            <p class="footer-text">Sabancı Üniversitesi
+                Orta Mahallesi
+                No:27 34956 Tuzla / İstanbul</p>
+            <p>ggk@sabanciuniv.edu</p>
+        </div>
+        <div class="footer-section questions footer-box">
+            <h3 class="footer-text">Sıkça Sorulan Sorular</h3>
+            <br>
+            <ul class="question-list">
+                <li class="list-item footer-text">GGK nedir?</li>
+                <li class="list-item">Bizimle nasıl çalışabilirsiniz?</li>
+                <li class="list-item">Etkinliklerimize nasıl katılabilirsiniz?</li>
+            </ul>
+        </div>
+        <div class="footer-section events footer-box">
+            <h3 class="footer-text">Yakın Etkinlikler</h3>
+            <br>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="bottom-text">Sabancı Üniversitesi | Genç Girişimciler Kulübü | 2020</p>
+    </div>
+</div>
