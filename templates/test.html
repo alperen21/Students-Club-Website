@@ -12,7 +12,7 @@
 
     .GGK-logo{
         margin: auto;
-        top: 150;
+        top: 160;
         left: 0;
         right: 0;
         bottom: 0;
@@ -42,21 +42,36 @@
     }
     .text-box-2{
         width: 30%;
-        background-color: darkgray;
+        background-color: rgb(211,211,211,0.5);
     }
 
     .card-1{
-        background-color:grey;
         padding:5%;
+        background-image: url("{% static 'images/mountain.jpg' %}");
+        background-size:cover;
+    }
+
+    .sep{
+        background-color: black;
+        height:5%;
+        width:100%;
+        padding:none;
+        margin:none;
+        top:765;
+        left:0;
+        right:0;
+        position:absolute;
     }
 
 
 </style>
 <div class="card-1">
+    <div class="container sep"></div>
+    <br>
     <div class="image-container">
         <div class="l-box"></div>
         <div class="image-box">
-            <img src="{% static 'images/GGK_logo-5.png' %}" class="GGK-logo">
+            <img src="{% static 'images/ggk_circle_logo.png' %}" class="GGK-logo">
         </div>
         <div class="r-box"></div>
     </div>
@@ -69,7 +84,7 @@
             <h3 class="intro-text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, distinctio.</h3>
         </div>
     </div>
-    
+    <hr>
     <div class="text-container-2">
         <div class="text-box-2">
             <h3 class="intro-text">Neden GGK?</h3>
