@@ -19,13 +19,38 @@
     margin-right:5%;
   }
 
-  .logo{
-        -webkit-filter:grayscale(30%);
-        transition-duration:0.3s;
-    }
-  .logo:hover{
-        -webkit-filter:grayscale(0);
-    }
+.logo{
+      -webkit-filter:grayscale(30%);
+      transition-duration:0.3s;
+  }
+.logo:hover{
+      -webkit-filter:grayscale(0);
+}
+nav{
+  position:relative;
+}
+#navbar-user-option-1{
+  position:absolute;
+  left:90%;
+  top:19%;
+}
+#navbar-user-option-2{
+  position:absolute;
+  top:19%;
+  left:94%;
+}
+#navbar-user-active-1{
+  position:absolute;
+  left:81%;
+}
+#navbar-user-active-2{
+  position:absolute;
+  left:84%;
+}
+#navbar-user-active-3{
+  position:absolute;
+  left:87%;
+}
 </style>
 <nav class="navbar navbarCollapse navbar-toggleable-md navbar-inverse fixed-top  navbar-custom">
     <a class="navbar-brand" href="{% url 'index' %}"><img class = "logo" src="{% static 'images/GGK_logo-2.png' %}"></a>
@@ -50,32 +75,35 @@
         </ul>
       </div>
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          
+          {% if request.user.is_authenticated %}
+          <li class="nav-item" id="navbar-user-active-1">
             <a class="nav-link px-2 custom-icon" href="#"><i class="fa fa-twitter"></i></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" id="navbar-user-active-2">
             <a class="nav-link px-2 custom-icon" href="#"><i class="fa fa-instagram"></i></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" id="navbar-user-active-3">
             <a class="nav-link px-2 custom-icon" href="#"><i class="fa fa-linkedin"></i></a>
-
+          </li>
+          <li class="nav-item" id="navbar-user-option-1">
+            <a href="#" class="nav-link">{{request.user.username}}</a>
+          </li>
+          <li class="nav-item" id="navbar-user-option-2">
+            <a href="{% url 'article:logout' %}" class="nav-link">Çıkış</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link px-2 custom-icon" href="https://twitter.com/su_ggk"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 custom-icon" href="https://www.instagram.com/sabanciggk"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 custom-icon" href="https://www.linkedin.com/company/18221543"><i class="fa fa-linkedin"></i></a>
+          </li>
+          {% endif %}
       </ul>
-      <!--<ul class="navbar-nav ml-auto">
-        {% if request.user.is_authenticated %}
-          <li class="nav-item active">
-            <a class="nav-link" href="{%url 'articles:dashboard' %}">{{request.user.username}} <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/user/logout">Çıkış Yap <span class="sr-only">(current)</span></a>
-          </li>
-        {% else %}
-          <li class="nav-item active">
-            <a class="nav-link" href="/user/register">Kayıt Ol <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/user/login">Giriş Yap <span class="sr-only">(current)</span></a>
-          </li>
-        {% endif %}-->
       </ul>
     </div>
   </nav>
