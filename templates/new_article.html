@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block body %}
+<style>
+    .article-form-image{
+        background-image: url("{% static 'images/writer.jpg' %}");
+        background-size: cover;
+        text-align: center;
+        padding:20%;
+        color:White;
+    }
+    .article-layout{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    .article-box{
+        width:100%;
+        margin:5%;
+    }
+    .article-list{
+        list-style:none;
+        padding: 0;
+        margin: 0;
+    }
+    .alert{
+        margin:2%;
+    }
+    .article-text{
+        color:maroon;
+    }
+</style>
+<div class="article-form-image">
+    <h1>Yeni Makale Yaz</h1>
+</div>
+{% if messages %}  
+    {% for message in messages %}
+        {% if message.tags == "info" %}
+            <br>
+            <div class="alert alert-danger">
+                    {{ message }}
+            </div>
+        {% else %}
+            <br>
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<div class="article-layout">
+    <div class="article-box">
+        <br>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.media}}
+            {{form|crispy}}
+            <button type=”submit” class="btn btn-danger">Gönder</button>
+        </form>
+    </div>
+</div>
+
+{% endblock body %}

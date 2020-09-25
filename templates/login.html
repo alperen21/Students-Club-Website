@@ -43,8 +43,30 @@
         height:50%;
         position:relative;
      }
+     #login-message{
+         position:absolute;
+         top:20%;
+         opacity:0.8;
+     }
 </style>
 <div id="login-form-image">
+
+    {% if messages %}  
+        {% for message in messages %}
+            {% if message.tags == "info" %}
+                <br>
+                <div class="alert alert-danger" id="login-message">
+                        {{ message }}
+                </div>
+            {% else %}
+                <br>
+                <div class="alert alert-{{ message.tags }}" id="login-message">
+                    {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
     {% if request.user.is_authenticated %}
     <div id="already-logged-in-container">
         <h3 id="already-logged-in">Zaten Giriş Yaptın</h3>
