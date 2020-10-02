@@ -46,7 +46,7 @@ def logout_user(request):
     return redirect("article:login")
 
 @login_required(login_url="article:login")
-def new_article(request):
+def dashboard(request):
     articles = Article.objects.filter(author=request.user)
     form = ArticleForm(request.POST or None, request.FILES or None)
     context = {

@@ -24,7 +24,7 @@ app_name = "article"
 urlpatterns = [
     path('/login',views.login_user,name="login"),
     path('/logout',views.logout_user,name="logout"),
-    path('/new_article',views.new_article,name="new_article"),
+    path('/dashboard',views.dashboard,name="dashboard"),
     path('/panel',views.panel,name="panel"),
     path('',views.blog,name="blog"),
 ] 

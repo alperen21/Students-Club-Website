@@ -22,5 +22,5 @@ urlpatterns = [
     path('',views.Index,name="index"),
     path('test',views.test,name="test"),
     path('contact',include("contact.urls")),
-    path('article',include("article.urls"))
+    path('blog',include("article.urls"))
 ]
