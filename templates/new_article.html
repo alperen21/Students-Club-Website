@@ -1,39 +1,7 @@
 {% extends "layout.html" %}
 {% load crispy_forms_tags %}
-{% load static %}
 {% block body %}
-<style>
-    .article-form-image{
-        background-image: url("{% static 'images/writer.jpg' %}");
-        background-size: cover;
-        text-align: center;
-        padding:20%;
-        color:White;
-    }
-    .article-layout{
-        display:flex;
-        flex-direction:row;
-        justify-content: space-between;
-    }
-    .article-box{
-        width:100%;
-        margin:5%;
-    }
-    .article-list{
-        list-style:none;
-        padding: 0;
-        margin: 0;
-    }
-    .alert{
-        margin:2%;
-    }
-    .article-text{
-        color:maroon;
-    }
-</style>
-<div class="article-form-image">
-    <h1>Yeni Makale Yaz</h1>
-</div>
+<div class="article-form-image smaller-image"></div>
 {% if messages %}  
     {% for message in messages %}
         {% if message.tags == "info" %}
@@ -49,6 +17,8 @@
         {% endif %}
     {% endfor %}
 {% endif %}
+<br><br>
+<h1 class="center-title lobster">Yeni Makale Yaz</h1>
 <div class="article-layout">
     <div class="article-box">
         <br>
@@ -60,5 +30,41 @@
         </form>
     </div>
 </div>
-
+{% if articles %}
+<hr>
+<br>
+<h1 class="center-title lobster">Önceki Yazdıkların</h1>
+<br>
+<div id="dashboard">
+    <div class="dashboard-side"></div>
+    <div class="dashboard-main">
+        <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Başlık</th>
+                <th scope="col">Yazar</th>
+                <th scope="col">Tarih</th>
+                <th scope="col">Güncelle</th>
+                <th scope="col">Sil</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                <tr>
+                    <th scope="row">{{article.id}}</th>
+                    <td><a href="/articles/article/{{article.id}}">{{article.title}}</a></td>
+                    <td>{{article.author.username}}</td>
+                    <td>{{article.created_date}}</td>
+                    <td><a href="/articles/update/{{article.id}}" class="btn btn-danger">Güncelle</a></td>
+                    <td><a href="/articles/delete/{{article.id}}" class="btn btn-danger">Sil</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+    <div class="dashboard-side"></div>
+</div>
+<br><br>
+{% endif %}
 {% endblock body %}

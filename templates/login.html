@@ -2,53 +2,7 @@
 {% load crispy_forms_tags %}
 {%load static%}
 {% block body %}
-<style>
-     #login-form-image{
-        background-image: url("{% static 'images/writer.jpg' %}");
-        color:white;
-        background-size: cover;
-        text-align: center;
-        padding:20%;
-        color:White;
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-     }
-     #login-form-container{
-         padding:25%;
-         background-color: rgb(24, 23, 22,0.8);
-         border-radius:40px;
-         height:80%;
-         position:relative;
-     }
-     #yazar-login{
-         position:absolute;
-         left:150;
-         top:150;
-     }
-     #already-logged-in{
-         position:absolute;
-         left:100;
-         top:150;
-     }
-     #already-logged-in-button{
-         position:absolute;
-         top:210;
-         left:150;
-     }
-     #already-logged-in-container{
-        padding:25%;
-        background-color: rgb(24, 23, 22,0.8);
-        border-radius:40px;
-        height:50%;
-        position:relative;
-     }
-     #login-message{
-         position:absolute;
-         top:20%;
-         opacity:0.8;
-     }
-</style>
+
 <div id="login-form-image">
 
     {% if messages %}  

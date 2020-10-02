@@ -1,57 +1,6 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  .navbar-custom{
-    background-color:black;
-  }
-  .logo{
-    height:1em;
-    padding-right:15%;
-    padding-left:5%;
-    position: relative;
-  }
-  .custom-icon{
-    height:4%;
-    margin-top:20%;
-  }
-  .social-icon{
-    margin-right:5%;
-  }
-
-.logo{
-      -webkit-filter:grayscale(30%);
-      transition-duration:0.3s;
-  }
-.logo:hover{
-      -webkit-filter:grayscale(0);
-}
-nav{
-  position:relative;
-}
-#navbar-user-option-1{
-  position:absolute;
-  left:90%;
-  top:19%;
-}
-#navbar-user-option-2{
-  position:absolute;
-  top:19%;
-  left:94%;
-}
-#navbar-user-active-1{
-  position:absolute;
-  left:81%;
-}
-#navbar-user-active-2{
-  position:absolute;
-  left:84%;
-}
-#navbar-user-active-3{
-  position:absolute;
-  left:87%;
-}
-</style>
 <nav class="navbar navbarCollapse navbar-toggleable-md navbar-inverse fixed-top  navbar-custom">
     <a class="navbar-brand" href="{% url 'index' %}"><img class = "logo" src="{% static 'images/GGK_logo-2.png' %}"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

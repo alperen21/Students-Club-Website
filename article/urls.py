@@ -26,6 +26,7 @@ urlpatterns = [
     path('/logout',views.logout_user,name="logout"),
     path('/new_article',views.new_article,name="new_article"),
     path('/panel',views.panel,name="panel"),
+    path('',views.blog,name="blog"),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

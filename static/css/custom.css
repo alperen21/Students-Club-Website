@@ -1,0 +1,307 @@
+/* Fonts */
+@font-face {
+    font-family: 'Lobster';
+    src: local('Lobster-Regular'),
+         url('../fonts/Lobster-Regular.ttf') format("truetype");
+}
+/* Login Page */
+#login-form-image{
+    background-image: url("../images/writer.jpg");
+    color:white;
+    background-size: cover;
+    text-align: center;
+    padding:20%;
+    color:White;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+ #login-form-container{
+     padding:25%;
+     background-color: rgb(24, 23, 22,0.8);
+     border-radius:40px;
+     height:80%;
+     position:relative;
+}
+ #yazar-login{
+     position:absolute;
+     left:150;
+     top:150;
+}
+ #already-logged-in{
+     position:absolute;
+     left:100;
+     top:150;
+}
+ #already-logged-in-button{
+     position:absolute;
+     top:210;
+     left:150;
+ }
+ #already-logged-in-container{
+    padding:25%;
+    background-color: rgb(24, 23, 22,0.8);
+    border-radius:40px;
+    height:50%;
+    position:relative;
+ }
+ #login-message{
+     position:absolute;
+     top:20%;
+     opacity:0.8;
+ }
+ /* Carousel */
+.image-effect{
+    -webkit-filter:grayscale(30%);
+    transition-duration:0.2s;
+}
+.image-effect:hover{
+    -webkit-filter:grayscale(0);
+}
+.carousel {
+    width:100%;
+    height:45em;
+}
+/* Footer */
+.footer{
+    background-color: #222222;
+    color:gainsboro;
+    height:400px;
+    width:100%;
+    position:relative;
+    background-image: url("../images/pattern3.jpg");
+    background-size:cover;
+}
+.footer-content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:5%;
+
+}
+.footer .footer-bottom{
+    background-color: black;
+    color:darkgrey;
+    height:40px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    padding-top: 0.5%;
+
+}
+
+.footer-box{
+    flex-basis: 30%;
+    padding-left:5%;
+    padding-right:5%;
+
+}
+.question-list{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+.bottom-text{
+    text-align: center;
+}
+.list-item:hover{
+    color:white;
+}
+.list-item:active{
+    color:maroon;
+}
+
+.footer-text{
+    color:#c0c0c0;
+}
+/* Navbar */
+.navbar-custom{
+    background-color:black;
+  }
+  .logo{
+    height:1em;
+    padding-right:15%;
+    padding-left:5%;
+    position: relative;
+  }
+  .custom-icon{
+    height:4%;
+    margin-top:20%;
+  }
+  .social-icon{
+    margin-right:5%;
+  }
+
+.logo{
+      -webkit-filter:grayscale(30%);
+      transition-duration:0.3s;
+  }
+.logo:hover{
+      -webkit-filter:grayscale(0);
+}
+nav{
+  position:relative;
+}
+#navbar-user-option-1{
+  position:absolute;
+  left:90%;
+  top:19%;
+}
+#navbar-user-option-2{
+  position:absolute;
+  top:19%;
+  left:94%;
+}
+#navbar-user-active-1{
+  position:absolute;
+  left:81%;
+}
+#navbar-user-active-2{
+  position:absolute;
+  left:84%;
+}
+#navbar-user-active-3{
+  position:absolute;
+  left:87%;
+}
+/* Contact */
+.contact-form-image{
+    background-image: url("../images/mails.jpg");
+    background-size: cover;
+    text-align: center;
+    padding:20%;
+    color:White;
+}
+.contact-layout{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.contact-box{
+    width:40%;
+    padding:3%;
+    margin:5%;
+}
+.contact-list{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+.alert{
+    margin:2%;
+}
+.contact-text{
+    color:maroon;
+}
+/* Introduction */
+.image-container{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+}
+.image-box{
+    flex:10;
+}
+
+.GGK-logo{
+    margin: auto;
+    top: 160;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.l-box{
+    flex:15;
+}
+.r-box{
+    flex:10;
+}
+
+.text-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.intro-text{
+    text-align: center;
+    color: white;
+}
+
+.text-container-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.text-box-2{
+    width: 30%;
+    background-color: rgb(211,211,211,0.5);
+    padding:3%;
+}
+
+.card-1{
+    padding:5%;
+    background-image: url("../images/mountain.jpg");
+    background-size:cover;
+}
+
+.sep{
+    background-color: black;
+    height:10%;
+    width:100%;
+    padding:none;
+    margin:none;
+    top:765;
+    left:0;
+    right:0;
+    position:absolute;
+}
+/* New Article */
+.article-form-image{
+    background-image: url("../images/writer.jpg");
+    background-size: cover;
+    text-align: center;
+    padding:20%;
+    color:White;
+}
+.article-layout{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.article-box{
+    width:100%;
+    margin:5%;
+}
+.article-list{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+.alert{
+    margin:2%;
+}
+.article-text{
+    color:maroon;
+}
+/* Dashboard */
+#dashboard{
+    display:flex;
+    justify-content: center;
+}
+.dashboard-main{
+    width:90%;
+    border:#ebebeb 1px solid;
+}
+.center-title{
+    text-align: center;
+}
+.lobster{
+    font-family: Lobster;
+    color:maroon;
+}
+.smaller-image{
+    padding:10%;
+    background-image: url("../images/james-barnett-kkaxqEPoF10-unsplash.jpg");
+}

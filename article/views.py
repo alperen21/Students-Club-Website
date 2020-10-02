@@ -5,6 +5,7 @@ from django.contrib import messages
 from contact.webmail import send_mail
 from article.forms import LoginForm
 from django.contrib.auth.models import User
+from .models import Article
 from django.contrib import messages
 from django.contrib.auth import login,authenticate,logout
 from django.contrib.auth.decorators import login_required
@@ -46,9 +47,11 @@ def logout_user(request):
 
 @login_required(login_url="article:login")
 def new_article(request):
+    articles = Article.objects.filter(author=request.user)
     form = ArticleForm(request.POST or None, request.FILES or None)
     context = {
         "form":form,
+        "articles":articles,
     }
     try:
         
@@ -69,4 +72,8 @@ def new_article(request):
 
 @login_required(login_url="article:login")
 def panel(request):
+
+    return render(request,"panel.html")
+
+def blog(request):
     pass
