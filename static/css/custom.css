@@ -338,13 +338,19 @@ nav{
 #intro-container{
     background-image: url("../images/tint.jpg");
     background-size: cover;
-    padding:10%;
+    padding:13%;
     color:white;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     background-attachment: fixed;
     background-position: bottom;
+}
+
+@media (min-width: 910px) {
+    #intro-container{
+        flex-direction: row;
+    }
 }
 
 #intro-container h1{
@@ -357,7 +363,12 @@ nav{
     font-family: SourceSans;
 }
 .box{
-    width: 40%;
+    width: 60%;
+}
+@media (min-width: 910px) {
+    .box{
+        width: 40%;
+    }
 }
 #about-container{
     display:flex;
@@ -366,17 +377,17 @@ nav{
     position:relative;
 }
 #about-container h3{
-    font-size: 50px;
+    font-size: 3.9vw;
     font-family: SourceSansBlack;
-    color:white;
+    color:beige;
     position:absolute;
     top:10%;
     left:5%;
 }
 #about-container p{
-    font-size: 20px;
+    font-size: 1.5vw;
     font-family: SourceSans;
-    color:white;
+    color:beige;
     padding:10%;
     top:20px;
     padding-top:150px;
@@ -394,8 +405,55 @@ nav{
     background-color: #dc133b;
     text-align: center;
 }
+
+#mobile-about{
+    display:none;
+    background-color: #dc133b;
+    color: beige;
+    text-align: left;
+    padding:20%;
+    margin:none;
+
+}
+@media (max-width: 1000px) {
+    #about-container{
+        display:none;
+    }
+    #mobile-about{
+        display:block;
+    }
+
+}
 #intro-logo{
     position:absolute;
-    top:240px;
-    right:150px;
+    top:18.75vw;
+    right:11.7vw;
+}
+.members{
+    background-image: url("../images/elevate-nYgy58eb9aw-unsplash.jpg");
+    height:80%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display:flex;
+    justify-content: center;
+}
+#members-card{
+    margin:5%;
+    width:50%;
+    background-color: beige;
+}
+#members-card h1{
+    font-family: SourceSansBlack;
+    color:#1a3047;
+}
+#members-card ul{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+#members-card li{
+    display: inline;
+    float: left;
+    margin:2%;
 }
