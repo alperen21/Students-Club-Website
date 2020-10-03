@@ -95,7 +95,7 @@
     height:400px;
     width:100%;
     position:relative;
-    background-image: url("../images/pattern3.jpg");
+    background-image: url("../images/newpattern.jpg");
     background-size:cover; 
 
 }
@@ -140,11 +140,11 @@
 }
 
 .footer-text{
-    color:#c0c0c0;
+    color:beige;
 }
 /* Navbar */
 .navbar-custom{
-    background-color:black;
+    background-color:#2d2725;
   }
   .logo{
     height:1em;
@@ -161,7 +161,7 @@
   }
 
 .logo{
-      -webkit-filter:grayscale(30%);
+      -webkit-filter:grayscale(20%);
       transition-duration:0.3s;
   }
 .logo:hover{
@@ -375,6 +375,7 @@ nav{
     flex-direction: row;
     flex-wrap: wrap;
     position:relative;
+    background-color: #dc133b;
 }
 #about-container h3{
     font-size: 3.9vw;
@@ -402,7 +403,6 @@ nav{
     text-align: center;
 }
 .about-text{
-    background-color: #dc133b;
     text-align: center;
 }
 
@@ -429,31 +429,62 @@ nav{
     top:18.75vw;
     right:11.7vw;
 }
-.members{
-    background-image: url("../images/elevate-nYgy58eb9aw-unsplash.jpg");
-    height:80%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    display:flex;
-    justify-content: center;
+#members-intro-layout{
+    background-color: #2d4059;
+    display: flex;
+    justify-content: space-around;
+    height:40%;
+    padding:5%;
 }
-#members-card{
-    margin:5%;
-    width:50%;
-    background-color: beige;
+
+#members-intro-layout div{
+    width:20%;
+    text-align: center;
 }
-#members-card h1{
+
+#members-intro-layout div h1{
+    font-size: 3.9vw;
     font-family: SourceSansBlack;
-    color:#1a3047;
+    color: beige;
 }
-#members-card ul{
-    list-style:none;
-    padding: 0;
-    margin: 0;
+
+#members-intro-layout div p{
+    font-size: 3.0vw;
+    font-family: SourceSans;
+    color: beige;
 }
-#members-card li{
-    display: inline;
-    float: left;
-    margin:2%;
+
+
+#member-image{
+    background-image: url("../images/elevate-nYgy58eb9aw-unsplash.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    height:80%;
+}
+#member-image h1{
+    padding:20%;
+    font-size: 8vw;
+    font-family: SourceSansBlack;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    #members-intro-layout{
+        flex-direction: column;
+        height:70%;
+    }
+    #members-intro-layout div{
+        width:100%;
+        text-align: center;
+    }
+    #member-image h1{
+        padding-top:45%;
+    }
+    #members-intro-layout div h1{
+        font-size: 10vw;
+    }
+    #members-intro-layout div p{
+        font-size: 6vw;
+    }
 }
