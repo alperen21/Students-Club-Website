@@ -4,6 +4,21 @@
     src: local('Lobster-Regular'),
          url('../fonts/Lobster-Regular.ttf') format("truetype");
 }
+@font-face {
+    font-family: 'SourceSans';
+    src: local('SourceSansPro-Regular'),
+        url('../fonts/SourceSansPro-Regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'SourceSansBold';
+    src: local('SourceSansPro-Bold'),
+        url('../fonts/SourceSansPro-Bold.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'SourceSansBlack';
+    src: local('SourceSansPro-Black'),
+        url('../fonts/SourceSansPro-Black.ttf') format("truetype");
+}
 /* Login Page */
 #login-form-image{
     background-image: url("../images/writer.jpg");
@@ -318,4 +333,69 @@ nav{
     padding:20%;
     background-image: url("../images/book-medium.jpg");
     background-attachment:fixed;
+}
+/* New Introduction */
+#intro-container{
+    background-image: url("../images/tint.jpg");
+    background-size: cover;
+    padding:10%;
+    color:white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+#intro-container h1{
+    font-size: 80px;
+    font-family: SourceSansBlack;
+}
+
+#intro-container p{
+    font-size: 20px;
+    font-family: SourceSans;
+}
+.box{
+    width: 40%;
+}
+#about-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position:relative;
+}
+#about-container h3{
+    font-size: 50px;
+    font-family: SourceSansBlack;
+    color:white;
+    position:absolute;
+    top:10%;
+    left:5%;
+}
+#about-container p{
+    font-size: 20px;
+    font-family: SourceSans;
+    color:white;
+    padding:10%;
+    top:20px;
+    padding-top:150px;
+}
+#about-box{
+    width:50%;
+    height:90%;
+    text-align: left;
+}
+.about-title{
+    background-color: #1a3047;
+    text-align: center;
+}
+.about-text{
+    background-color: #dc133b;
+    text-align: center;
+}
+#intro-logo{
+    position:absolute;
+    top:240px;
+    right:150px;
 }

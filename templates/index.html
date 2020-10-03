@@ -1,6 +1,24 @@
 {% extends "layout.html" %}
+{% load static %}
 {% block body %}
-{% include "includes/carousel.html"%}
-<br><br><br><br><br>
-{% include "introduction.html"%}
+<!--Introduction-->
+<div id="intro-container">
+    <div class="box" id="intro-box-1">
+        <h1>Genç Girişimciler Kulübü</h1>
+    </div>
+    <div class = "box" id="intro-box-2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quas voluptate excepturi dolores labore recusandae totam ab distinctio vero incidunt sed, ut, consequatur saepe sunt, vitae quis veniam obcaecati iste. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, in sit! Vero ut suscipit in, illo dignissimos cum nam fugiat sit vel praesentium libero? Quam ea maxime eum aliquid quibusdam?</p>
+        <button class="btn btn-info">Üye Ol</button>
+        <button class="btn btn-info">İletişime Geç</button>
+    </div>
+</div>
+<div id="about-container">
+    <div id="about-box" class="about-title">
+        <h3>Hakkımızda</h3>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nihil reprehenderit incidunt, quasi laboriosam dolor deserunt modi, aperiam eum quis, nesciunt rerum! In maxime ab debitis, doloremque nobis magnam id. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, omnis iure ea eveniet error maxime iusto est minima fuga quia iste cumque sed quis molestiae, illum, ullam pariatur quos porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, dolore similique! Laboriosam vero ipsum libero voluptas nam, esse ex ea temporibus quisquam molestias odio sit velit iusto ut eos accusantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem veniam corporis porro earum doloremque dicta esse, nemo, nobis maiores rem ipsa! Perferendis veritatis ipsa a numquam tempora earum sed nam.</p>
+    </div>
+    <div id="about-box" class="about-text">
+        <img src="{% static 'images/GGK_logo-3.png' %}" id="intro-logo">
+    </div>
+</div>
 {% endblock body %}
