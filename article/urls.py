@@ -26,7 +26,7 @@ urlpatterns = [
     path('/logout',views.logout_user,name="logout"),
     path('/dashboard',views.dashboard,name="dashboard"),
     path('/panel',views.panel,name="panel"),
-    path('',views.blog,name="blog"),
+    path('/',views.blog,name="blog"),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

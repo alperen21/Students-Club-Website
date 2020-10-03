@@ -81,7 +81,8 @@
     width:100%;
     position:relative;
     background-image: url("../images/pattern3.jpg");
-    background-size:cover;
+    background-size:cover; 
+
 }
 .footer-content{
     display:flex;
@@ -179,6 +180,7 @@ nav{
 /* Contact */
 .contact-form-image{
     background-image: url("../images/mails.jpg");
+    background-attachment: fixed;
     background-size: cover;
     text-align: center;
     padding:20%;
@@ -250,8 +252,8 @@ nav{
     background-color: rgb(211,211,211,0.5);
     padding:3%;
 }
-
 .card-1{
+
     padding:5%;
     background-image: url("../images/mountain.jpg");
     background-size:cover;
@@ -313,6 +315,7 @@ nav{
     color:maroon;
 }
 .smaller-image{
-    padding:10%;
-    background-image: url("../images/james-barnett-kkaxqEPoF10-unsplash.jpg");
+    padding:20%;
+    background-image: url("../images/book-medium.jpg");
+    background-attachment:fixed;
 }

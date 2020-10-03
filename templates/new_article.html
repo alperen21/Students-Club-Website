@@ -41,10 +41,10 @@
         <table class="table table-hover table-dark">
             <thead>
               <tr>
-                <th scope="col">id</th>
                 <th scope="col">Başlık</th>
                 <th scope="col">Yazar</th>
                 <th scope="col">Tarih</th>
+                <th scope="col">Onay</th>
                 <th scope="col">Güncelle</th>
                 <th scope="col">Sil</th>
               </tr>
@@ -52,10 +52,18 @@
             <tbody>
                 {% for article in articles %}
                 <tr>
-                    <th scope="row">{{article.id}}</th>
+                    {% if article.check %}
                     <td><a href="/articles/article/{{article.id}}">{{article.title}}</a></td>
+                    {% else %}
+                    <td>{{article.title}}</td>
+                    {% endif %}
                     <td>{{article.author.username}}</td>
                     <td>{{article.created_date}}</td>
+                    {% if article.check %}
+                    <td>Onaylandı</td>
+                    {% else %}
+                    <td>Onaylanmadı</td>
+                    {% endif %}
                     <td><a href="/articles/update/{{article.id}}" class="btn btn-danger">Güncelle</a></td>
                     <td><a href="/articles/delete/{{article.id}}" class="btn btn-danger">Sil</a></td>
                 </tr>

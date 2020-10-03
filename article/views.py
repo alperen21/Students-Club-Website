@@ -76,4 +76,4 @@ def panel(request):
     return render(request,"panel.html")
 
 def blog(request):
-    pass
+    return render(request,"blog.html")

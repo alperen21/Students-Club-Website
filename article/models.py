@@ -8,3 +8,4 @@ class Article(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     image = models.FileField(blank=True,null=True,verbose_name="Makale Resmi")
     author = models.ForeignKey("auth.user", on_delete=models.CASCADE)
+    check = models.BooleanField(default=False)
