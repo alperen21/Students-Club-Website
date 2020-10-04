@@ -27,6 +27,6 @@ urlpatterns = [
     path('/dashboard',views.dashboard,name="dashboard"),
     path('/panel',views.panel,name="panel"),
     path('/',views.blog,name="blog"),
+    path('/article/<int:id>',views.article,name="article"),
 ] 
 
-urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

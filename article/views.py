@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from contact.forms import contact_form
 from article.forms import ArticleForm
 from django.contrib import messages
@@ -77,3 +77,11 @@ def panel(request):
 
 def blog(request):
     return render(request,"blog.html")
+
+def article(request,id):
+    article = get_object_or_404(Article,id=id)
+    context = {
+        "article":article,
+    }
+    return render(request,"article.html",context)
+    

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if article.image %}
+<style>
+    .blog-image{
+    background-image:url("/media/73df5960ba0b462963c58091225b0332.png");
+    background-position: center;
+    padding:20%;
+    }
+</style>
+{% endif %}
+<style>
+    body{
+        background-color: whitesmoke;
+    }
+</style>
+<div id="blog-intro">
+    <h1 class="blog-text">Blog</h1>
+</div>
+<br><br><br>
+<div class="blog-entry">
+    {% if article.image %}
+        <div class="blog-image"></div>
+        <br><br>
+    {% endif %}
+    <h1>{{article.title}}</h1>
+    <br>
+    <p id="author">{{article.author}} {{article.created_date}}</p>
+    <p>
+        {{article.content|safe}}
+    </p>
+</div>
+<br><br><br>
+<p>{{article.image.url}}</p>
+{% endblock body %}

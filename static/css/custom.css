@@ -488,3 +488,34 @@ nav{
         font-size: 6vw;
     }
 }
+/* Blog */
+#blog-intro {
+    text-align: center;
+    width:100%;
+    padding:15%;
+    background-image: url("../images/neel-aSPbuSG4rpo-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.blog-text {
+    color:White;
+    font-family: Lobster;
+    font-size: 9vw;
+}
+.blog-entry{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.blog-entry h1{
+    font-family: SourceSansBlack;
+    text-align: center;
+}
+.blog-entry p{
+    font-family: SourceSans;
+}
+#author{
+    font-family: SourceSansBlack;
+    color: darkgray;
+}
