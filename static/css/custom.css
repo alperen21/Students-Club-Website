@@ -488,7 +488,7 @@ nav{
         font-size: 6vw;
     }
 }
-/* Blog */
+/* Blog:Article */
 #blog-intro {
     text-align: center;
     width:100%;
@@ -518,4 +518,13 @@ nav{
 #author{
     font-family: SourceSansBlack;
     color: darkgray;
+}
+
+@media (max-width: 1000px) {
+    #blog-intro {
+        padding-top:30%;
+    }
+    .blog-image{
+        display:None;
+    }
 }
