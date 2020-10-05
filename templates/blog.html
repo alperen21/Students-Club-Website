@@ -4,64 +4,107 @@
     body{
         background-color: whitesmoke;
     }
+    .all-articles-layout{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-between;
+    }
+    .article-preview{
+        width:28%;
+        margin: 2vw;
+        background-color: white;
+        transition:0.5s;
+    }
+    .article-preview:hover{
+        transform:scale(1.1);
+    }
+    .article-preview h3{
+        font-family: SourceSansBlack;
+        color: #1a3047;
+        padding-left:5%;
+        padding-right:5%;
+        padding-top:2%;
+        overflow-wrap:break-word;
+    }
+    .article-preview p{
+        font-family: SourceSans;
+        padding-left:5%;
+        padding-right:5%;
+        padding-top:2%;
+    }
+    .article-image{
+        background-image: url("../static/images/73df5960ba0b462963c58091225b0332.png");
+        padding:30%;
+        background-position: center;
+    }
+    #article-info{
+        color:rgb(148, 148, 148);
+    }
+    #preview-text{
+        color:black;
+    }
+    .article-preview a:hover{
+        text-decoration: none;
+    }
 </style>
 <div id="blog-intro">
     <h1 class="blog-text">Blog</h1>
 </div>
 <br><br><br>
-<div class="blog-entry">
-    <div class="blog-image"></div>
-    <br><br>
-    <h1>Blog Post</h1>
-    <br>
-    <p id="author">Author 21 Ağustos 1998</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit maiores quae. Eligendi, deleniti sed non temporibus voluptates suscipit officiis enim in aliquid! 
-        Velit beatae qui dolores temporibus, totam ducimus!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique soluta, unde natus nesciunt optio cumque est ipsum rerum doloremque, sunt qui necessitatibus perspiciatis 
-        veniam impedit deserunt numquam! Ipsum, beatae.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        
-        Laboriosam, asperiores aliquid maiores omnis officia esse doloremque harum? Velit voluptates aperiam, nulla ipsa natus quasi facilis, voluptatem, esse id autem ad!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Nisi libero voluptatum, repellat quam dolore, possimus dolorum nam reiciendis, beatae temporibus quo similique. Est animi nemo, ullam magni totam nisi tenetur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Modi ab consequatur molestiae dignissimos repellat voluptates, provident cum delectus harum illo? Quis harum animi quam ipsum qui molestiae debitis aut enim.
-        
-        Velit beatae qui dolores temporibus, totam ducimus!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique soluta, unde natus nesciunt optio cumque est ipsum rerum doloremque, sunt qui necessitatibus perspiciatis 
-        veniam impedit deserunt numquam! Ipsum, beatae.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        
-            Laboriosam, asperiores aliquid maiores omnis officia esse doloremque harum? Velit voluptates aperiam, nulla ipsa natus quasi facilis, voluptatem, esse id autem ad!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Nisi libero voluptatum, repellat quam dolore, possimus dolorum nam reiciendis, beatae temporibus quo similique. Est animi nemo, ullam magni totam nisi tenetur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Modi ab consequatu
-
-            Velit beatae qui dolores temporibus, totam ducimus!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique soluta, unde natus nesciunt optio cumque est ipsum rerum doloremque, sunt qui necessitatibus perspiciatis 
-        veniam impedit deserunt numquam! Ipsum, beatae.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        
-            Laboriosam, asperiores aliquid maiores omnis officia esse doloremque harum? Velit voluptates aperiam, nulla ipsa natus quasi facilis, voluptatem, esse id autem ad!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Nisi libero voluptatum, repellat quam dolore, possimus dolorum nam reiciendis, beatae temporibus quo similique. Est animi nemo, ullam magni totam nisi tenetur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Modi ab consequatu
-
-
-            Velit beatae qui dolores temporibus, totam ducimus!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique soluta, unde natus nesciunt optio cumque est ipsum rerum doloremque, sunt qui necessitatibus perspiciatis 
-        veniam impedit deserunt numquam! Ipsum, beatae.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        
-        Laboriosam, asperiores aliquid maiores omnis officia esse doloremque harum? Velit voluptates aperiam, nulla ipsa natus quasi facilis, voluptatem, esse id autem ad!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Nisi libero voluptatum, repellat quam dolore, possimus dolorum nam reiciendis, beatae temporibus quo similique. Est animi nemo, ullam magni totam nisi tenetur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Modi ab consequatu
-    </p>
+<div class="all-articles-layout">
+    <div class="article-preview">
+        <a href="#">
+            <div class="article-image"></div>
+            <br>
+            <h3>Blog Post</h3>
+            <p id="preview-text">Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Atque at tenetur mollitia libero, 
+                excepturi ad labore quisquam quasi consequuntur natus possimus a 
+                voluptate iure ab iste laborum necessitatibus magnam nesciunt!
+            </p>
+        <p id="article-info">Alperen Yıldız 21 Ağustos 1998</p>
+        </a>
+    </div>
+    <div class="article-preview">
+        <a href="#">
+            <div class="article-image"></div>
+            <br>
+            <h3>Blog Post</h3>
+            <p id="preview-text">Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Atque at tenetur mollitia libero, 
+                excepturi ad labore quisquam quasi consequuntur natus possimus a 
+                voluptate iure ab iste laborum necessitatibus magnam nesciunt!
+            </p>
+        <p id="article-info">Alperen Yıldız 21 Ağustos 1998</p>
+        </a>
+    </div>
+    <div class="article-preview">
+        <a href="#">
+            <div class="article-image"></div>
+            <br>
+            <h3>Blog Post</h3>
+            <p id="preview-text">Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Atque at tenetur mollitia libero, 
+                excepturi ad labore quisquam quasi consequuntur natus possimus a 
+                voluptate iure ab iste laborum necessitatibus magnam nesciunt!
+            </p>
+        <p id="article-info">Alperen Yıldız 21 Ağustos 1998</p>
+        </a>
+    </div>
+    <div class="article-preview">
+        <a href="#">
+            <div class="article-image"></div>
+            <br>
+            <h3>Blog Post</h3>
+            <p id="preview-text">Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Atque at tenetur mollitia libero, 
+                excepturi ad labore quisquam quasi consequuntur natus possimus a 
+                voluptate iure ab iste laborum necessitatibus magnam nesciunt!
+            </p>
+        <p id="article-info">Alperen Yıldız 21 Ağustos 1998</p>
+        </a>
+    </div>
 </div>
 <br><br><br>
-
 {% endblock body %}

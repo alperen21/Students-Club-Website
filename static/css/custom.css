@@ -194,23 +194,45 @@ nav{
 }
 /* Contact */
 .contact-form-image{
-    background-image: url("../images/mails.jpg");
+    background-image: url("../images/markus-winkler-QFPtc0EGCtI-unsplash.jpg");
     background-attachment: fixed;
     background-size: cover;
     text-align: center;
-    padding:20%;
+    padding:25%;
     color:White;
 }
+
+.contact-form-image{
+    font-family: SourceSansBlack;
+}
+.contact-form-image h1{
+    font-size: 6vw;
+}
+
 .contact-layout{
+    
     display:flex;
     flex-direction:row;
     justify-content: space-between;
+    background-color: whitesmoke;
 }
+
+
 .contact-box{
-    width:40%;
+    width:50%;
     padding:3%;
     margin:5%;
 }
+
+@media (max-width: 1000px) {
+    .contact-layout{
+        flex-direction: column;
+    }
+    .contact-box{
+        width:100%;
+    }   
+}
+
 .contact-list{
     list-style:none;
     padding: 0;
@@ -221,6 +243,14 @@ nav{
 }
 .contact-text{
     color:maroon;
+    font-family: SourceSansBlack;
+    font-size:3vw;
+}
+.contact-list li h5{
+    font-family: SourceSansBlack;
+}
+.contact-list li p{
+    font-family: SourceSans;
 }
 /* Introduction */
 .image-container{
