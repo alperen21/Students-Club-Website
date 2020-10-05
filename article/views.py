@@ -76,7 +76,11 @@ def panel(request):
     return render(request,"panel.html")
 
 def blog(request):
-    return render(request,"blog.html")
+    articles = Article.objects.all()
+    context = {
+        "articles":articles,
+    }
+    return render(request,"blog.html",context)
 
 def article(request,id):
     article = get_object_or_404(Article,id=id)

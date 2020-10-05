@@ -51,60 +51,35 @@
 <div id="blog-intro">
     <h1 class="blog-text">Blog</h1>
 </div>
+
+{% if articles %}
 <br><br><br>
+
 <div class="all-articles-layout">
-    <div class="article-preview">
-        <a href="#">
+
+    {% for article in articles %}
+        <div class="article-preview">
+            <a href="/blog/article/{{article.id}}">
+            {% if article.image %}
+            <div class="article-image" style="background-image:url({{article.image.url}});"></div>
+            {% else %}
             <div class="article-image"></div>
-            <br>
-            <h3>Blog Post</h3>
-            <p id="preview-text">Lorem ipsum dolor sit amet consectetur, 
-                adipisicing elit. Atque at tenetur mollitia libero, 
-                excepturi ad labore quisquam quasi consequuntur natus possimus a 
-                voluptate iure ab iste laborum necessitatibus magnam nesciunt!
-            </p>
-        <p id="article-info">Alperen Yıldız 21 Ağustos 1998</p>
-        </a>
-    </div>
-    <div class="article-preview">
-        <a href="#">
-            <div class="article-image"></div>
-            <br>
-            <h3>Blog Post</h3>
-            <p id="preview-text">Lorem ipsum dolor sit amet consectetur, 
-                adipisicing elit. Atque at tenetur mollitia libero, 
-                excepturi ad labore quisquam quasi consequuntur natus possimus a 
-                voluptate iure ab iste laborum necessitatibus magnam nesciunt!
-            </p>
-        <p id="article-info">Alperen Yıldız 21 Ağustos 1998</p>
-        </a>
-    </div>
-    <div class="article-preview">
-        <a href="#">
-            <div class="article-image"></div>
-            <br>
-            <h3>Blog Post</h3>
-            <p id="preview-text">Lorem ipsum dolor sit amet consectetur, 
-                adipisicing elit. Atque at tenetur mollitia libero, 
-                excepturi ad labore quisquam quasi consequuntur natus possimus a 
-                voluptate iure ab iste laborum necessitatibus magnam nesciunt!
-            </p>
-        <p id="article-info">Alperen Yıldız 21 Ağustos 1998</p>
-        </a>
-    </div>
-    <div class="article-preview">
-        <a href="#">
-            <div class="article-image"></div>
-            <br>
-            <h3>Blog Post</h3>
-            <p id="preview-text">Lorem ipsum dolor sit amet consectetur, 
-                adipisicing elit. Atque at tenetur mollitia libero, 
-                excepturi ad labore quisquam quasi consequuntur natus possimus a 
-                voluptate iure ab iste laborum necessitatibus magnam nesciunt!
-            </p>
-        <p id="article-info">Alperen Yıldız 21 Ağustos 1998</p>
-        </a>
-    </div>
+            {% endif %}
+                <br>
+                <h3>{{article.title}}</h3>
+                <p id="preview-text">{{article.content|striptags|truncatewords:30}}
+                </p>
+            <p id="article-info">{{article.author}} {{article.created_date}}</p>
+            </a>
+        </div>
+    {% endfor %}
+
 </div>
+
+
+
 <br><br><br>
+
+{% endif %}
+
 {% endblock body %}
