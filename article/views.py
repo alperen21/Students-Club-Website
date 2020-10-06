@@ -88,4 +88,6 @@ def article(request,id):
         "article":article,
     }
     return render(request,"article.html",context)
-    
+
+def events(request):
+    return render(request,"events.html")

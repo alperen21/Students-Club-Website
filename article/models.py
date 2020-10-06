@@ -9,3 +9,6 @@ class Article(models.Model):
     image = models.FileField(blank=True,null=True,verbose_name="Makale Resmi")
     author = models.ForeignKey("auth.user", on_delete=models.CASCADE)
     check = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title
