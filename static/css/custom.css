@@ -200,6 +200,7 @@ nav{
     text-align: center;
     padding:25%;
     color:White;
+    width:100%;
 }
 
 .contact-form-image{
@@ -229,7 +230,8 @@ nav{
         flex-direction: column;
     }
     .contact-box{
-        width:100%;
+        width:90%;
+        padding-left: 5%;
     }   
 }
 
@@ -626,4 +628,66 @@ nav{
 
 .event-layout{
     display:flex;
+}
+
+.event-intro-image{
+    background-image: url("../images/headway-F2KRf_QfCqw-unsplash.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    padding:27%;
+    color:White;
+    width:100%;
+}
+.event-intro-image h1{
+    font-size: 6vw;
+}
+
+.event-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px; 
+    grid-auto-columns: minmax(200px,auto);
+    margin:2vw;
+}
+
+
+.event-text{
+    grid-column:2/4;
+    grid-row:2/3;
+    grid-auto-rows: 1000px;
+    padding: 5%;
+    background-color: white;
+    color:white;
+    background-image: url("../images/eventcard.jpg");
+    background-size:cover;
+    font-family: SourceSans;
+}
+
+.event-text > h5{
+    font-family: SourceSansBlack;
+}
+
+
+
+.headings{
+    text-align: center;
+    padding:2%;
+    background-color: maroon;
+    color:white;
+    font-family: SourceSansBlack;
+}
+
+.headings span{
+    left:20px;
+}
+
+.poster{
+    background-image: url("../images/poster.png");
+    background-size: cover;
+    grid-column:1/2;
+    grid-row:1/3;
+    padding-top:36vw;
+    padding-left:30vw;
+    background-repeat:no-repeat;
 }
