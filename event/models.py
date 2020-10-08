@@ -23,6 +23,10 @@ class Event(models.Model):
 
     def __str__(self):
         return self.title
+    
+    class Meta:
+        ordering = ['start_date']
+
 
 class Sponsor(models.Model):
     event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="sponsor")
