@@ -23,5 +23,6 @@ app_name = "event"
 
 urlpatterns = [
     path('/',views.events,name="events"),
+    path('/<int:id>',views.event,name="event"),
 ] 
 

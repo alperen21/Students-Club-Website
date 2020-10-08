@@ -24,8 +24,18 @@
             <h6><i class="fa fa-clock-o"></i> {{event.start_date}}</h6>
             <h6><i class="fa fa-building"></i> {{event.location}}</h6>
             <br><br>
-            <button class="btn btn-info">Katıl</button>
-            <button class="btn btn-info">Daha Fazla Bilgi Al</button>
+
+            {% if event.distinct_ticket %}
+                <a class="btn btn-info" href="{{event.distinct_ticket}}">Katıl</a>
+            {% else %}
+                <a class="btn btn-info" href="#">Katıl</a>
+            {% endif %}
+            {% if event.distinct_page %}
+                <a class="btn btn-info" href="{{event.distinct_page}}">Daha Fazla Bilgi Al</a>
+            {% else %}
+                <a class="btn btn-info" href="/events/{{event.id}}">Daha Fazla Bilgi Al</a>
+            {% endif %}
+            
         </div>
     </div>
     <br>

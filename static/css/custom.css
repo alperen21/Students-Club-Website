@@ -642,6 +642,7 @@ nav{
 }
 .event-intro-image h1{
     font-size: 6vw;
+    font-family: SourceSansBlack;
 }
 
 .event-grid{
@@ -715,4 +716,29 @@ nav{
     .br-wrapper{
         display:none;
     }
+}
+/* Event */
+
+.sponsor{
+    display:flex;
+    justify-content:space-evenly;
+}
+.sponsors{
+    text-align: center;
+}
+.sponsor-logo-wrapper{
+    height: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+
+}
+.sponsorlogo{
+    background-image: url("../images/krispy-kreme-logo-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 500px;
 }

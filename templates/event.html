@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block body %}
+<style>
+    .sponsor-logo{
+        background-image: url("../static/images/Python-logo.jpg");
+        padding:20%;
+    }
+</style>
+<div class="event-intro-image" id="mail-bg">
+    <h1>{{event.title}}</h1>
+</div>
+<br><br><br>
+<div class="blog-entry">
+    <br>
+    <p>
+        {{event.details|safe}}
+    </p>
+</div>
+<br><br><br>
+<iframe src="{{event.iframe_url}}" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<br><br><br>
+<div class="sponsors">
+    <h2>Ana Sponsor</h2>
+    <hr>
+    <div class="sponsor">
+        <a href="#"><div class="sponsor-logo-wrapper ana">
+            <div class="sponsorlogo"></div>
+        </div></a>
+        <a href="#"><div class="sponsor-logo-wrapper ana">
+            <div class="sponsorlogo"></div>
+        </div></a>
+    </div>
+    <br><br><br>
+    <h2>Altın Sponsorlar</h2>
+    <hr>
+    <div class="sponsor">
+        <a href="#"><div class="sponsor-logo-wrapper ana">
+            <div class="sponsorlogo"></div>
+        </div></a>
+    </div>
+    <br><br><br>
+    <h2>Gümüş Sponsorlar</h2>
+    <hr>
+    <div class="sponsor">
+        <a href="#"><div class="sponsor-logo-wrapper ana">
+            <div class="sponsorlogo"></div>
+        </div></a>
+    </div>
+    <br><br><br>
+    <h2>Bronz Sponsorlar</h2>
+    <hr>
+    <div class="sponsor">
+        <a href="#"><div class="sponsor-logo-wrapper ana">
+            <div class="sponsorlogo"></div>
+        </div></a>
+    </div>
+    <br><br><br>
+    <h2>Ürün Sponsorları</h2>
+    <hr>
+    <div class="sponsor">
+        <a href="#"><div class="sponsor-logo-wrapper ana">
+            <div class="sponsorlogo"></div>
+        </div></a>
+    </div>
+    <br><br><br>
+    <h2>Medya Sponsorları</h2>
+    <hr>
+    <div class="sponsor">
+        <a href="#"><div class="sponsor-logo-wrapper ana">
+            <div class="sponsorlogo"></div>
+        </div></a>
+    </div>
+</div>
+<br><br><br>
+
+{% endblock body %}
