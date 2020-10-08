@@ -635,7 +635,8 @@ nav{
     background-attachment: fixed;
     background-size: cover;
     text-align: center;
-    padding:27%;
+    padding-top:27%;
+    padding-bottom: 27%;
     color:White;
     width:100%;
 }
@@ -692,4 +693,26 @@ nav{
     padding-top:36vw;
     padding-left:30vw;
     background-repeat:no-repeat;
+}
+
+@media (max-width: 1000px) {
+
+    .poster{
+        display:none;
+    }
+
+    .headings{
+        grid-column:1/4;
+    }
+
+    .event-text{
+        grid-column:1/4;
+    }
+    .event-intro-image{
+        padding-top:70%;
+        padding-bottom:70%;
+    }
+    .br-wrapper{
+        display:none;
+    }
 }
