@@ -722,6 +722,7 @@ nav{
 .sponsor{
     display:flex;
     justify-content:space-evenly;
+    flex-wrap: wrap;
 }
 .sponsors{
     text-align: center;
