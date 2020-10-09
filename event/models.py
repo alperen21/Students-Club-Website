@@ -1,16 +1,5 @@
 from django.db import models
 
-
-sponsor_types = (
-    ('altın','ALTIN'),
-    ('gümüş','GÜMÜŞ'),
-    ('bronz','BRONZ'),
-    ('ürün','ÜRÜN'),
-    ('destek','DESTEK'),
-    ('medya','MEDYA'),
-)
-
-
 # Create your models here.
 class Event(models.Model):
     title = models.CharField(max_length=50)
@@ -38,11 +27,56 @@ class Event(models.Model):
         ordering = ['start_date']
 
 
-class Sponsor(models.Model):
-    event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="sponsor")
+class MainSponsor(models.Model):
+    event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="MainSponsor")
     name = models.CharField(max_length=20,verbose_name="Sponsorun adı")
     logo = models.FileField(blank=True,null=True,verbose_name="Sponsorun logosu")
-    sponsorship_type = models.CharField(max_length=6,choices=sponsor_types)
+    url = models.CharField(max_length=1000,blank=True,null=True,verbose_name="Sponsor Sayfasının Linki")
+
+    def __str__(self):
+        return self.name + f" ({self.event.title})"
+
+class GoldSponsor(models.Model):
+    event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="GoldSponsor")
+    name = models.CharField(max_length=20,verbose_name="Sponsorun adı")
+    logo = models.FileField(blank=True,null=True,verbose_name="Sponsorun logosu")
+    url = models.CharField(max_length=1000,blank=True,null=True,verbose_name="Sponsor Sayfasının Linki")
+
+    def __str__(self):
+        return self.name + f" ({self.event.title})"
+
+class SilverSponsor(models.Model):
+    event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="SilverSponsor")
+    name = models.CharField(max_length=20,verbose_name="Sponsorun adı")
+    logo = models.FileField(blank=True,null=True,verbose_name="Sponsorun logosu")
+    url = models.CharField(max_length=1000,blank=True,null=True,verbose_name="Sponsor Sayfasının Linki")
+
+    def __str__(self):
+        return self.name + f" ({self.event.title})"
+
+class BronzeSponsor(models.Model):
+    event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="BronzeSponsor")
+    name = models.CharField(max_length=20,verbose_name="Sponsorun adı")
+    logo = models.FileField(blank=True,null=True,verbose_name="Sponsorun logosu")
+    url = models.CharField(max_length=1000,blank=True,null=True,verbose_name="Sponsor Sayfasının Linki")
+
+    def __str__(self):
+        return self.name + f" ({self.event.title})"
+
+class ItemSponsor(models.Model):
+    event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="ItemSponsor")
+    name = models.CharField(max_length=20,verbose_name="Sponsorun adı")
+    logo = models.FileField(blank=True,null=True,verbose_name="Sponsorun logosu")
+    url = models.CharField(max_length=1000,blank=True,null=True,verbose_name="Sponsor Sayfasının Linki")
+
+    def __str__(self):
+        return self.name + f" ({self.event.title})"
+
+class MediaSponsor(models.Model):
+    event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="MediaSponsor")
+    name = models.CharField(max_length=20,verbose_name="Sponsorun adı")
+    logo = models.FileField(blank=True,null=True,verbose_name="Sponsorun logosu")
+    url = models.CharField(max_length=1000,blank=True,null=True,verbose_name="Sponsor Sayfasının Linki")
 
     def __str__(self):
         return self.name + f" ({self.event.title})"

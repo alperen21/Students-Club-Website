@@ -743,3 +743,8 @@ nav{
     height: 200px;
     width: 500px;
 }
+
+.sponsors h2{
+    font-family: SourceSans;
+    color: rgb(29, 29, 29);
+}
