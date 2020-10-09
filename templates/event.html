@@ -25,9 +25,17 @@
         <hr>
         <div class="sponsor">
             {% for sponsor in mainsponsors %}
-                <a href="#"><div class="sponsor-logo-wrapper ana">
-                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                </div></a>
+                {% if sponsor.url %}
+                    <a href="{{sponsor.url}}">
+                        <div class="sponsor-logo-wrapper ana">
+                            <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
         <br><br><br>
@@ -37,9 +45,17 @@
         <hr>
         <div class="sponsor">
         {% for sponsor in goldsponsors %}
-            <a href="#"><div class="sponsor-logo-wrapper ana">
-                <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-            </div></a>
+            {% if sponsor.url %}
+                <a href="{{sponsor.url}}">
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                </a>
+            {% else %}
+                <div class="sponsor-logo-wrapper ana">
+                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                </div>
+            {% endif %}
         {% endfor %}
         </div>
         <br><br><br>
@@ -49,9 +65,17 @@
         <hr>
         <div class="sponsor">
             {% for sponsor in silversponsors %}
-                <a href="#"><div class="sponsor-logo-wrapper ana">
-                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                </div></a>
+                {% if sponsor.url %}
+                    <a href="{{sponsor.url}}">
+                        <div class="sponsor-logo-wrapper ana">
+                            <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
         <br><br><br>
@@ -61,9 +85,17 @@
     <hr>
     <div class="sponsor">
         {% for sponsor in bronzesponsors %}
-            <a href="#"><div class="sponsor-logo-wrapper ana">
-                <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-            </div></a>
+            {% if sponsor.url %}
+                <a href="{{sponsor.url}}">
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                </a>
+            {% else %}
+                <div class="sponsor-logo-wrapper ana">
+                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                </div>
+            {% endif %}
         {% endfor %}
     </div>
     <br><br><br>
@@ -73,9 +105,17 @@
         <hr>
         <div class="sponsor">
             {% for sponsor in itemsponsors %}
-                <a href="#"><div class="sponsor-logo-wrapper ana">
-                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                </div></a>
+                {% if sponsor.url %}
+                    <a href="{{sponsor.url}}">
+                        <div class="sponsor-logo-wrapper ana">
+                            <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
         <br><br><br>
@@ -85,9 +125,17 @@
     <hr>
     <div class="sponsor">
         {% for sponsor in mediasponsors %}
-            <a href="#"><div class="sponsor-logo-wrapper ana">
-                <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-            </div></a>
+            {% if sponsor.url %}
+                <a href="{{sponsor.url}}">
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                </a>
+            {% else %}
+                <div class="sponsor-logo-wrapper ana">
+                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                </div>
+            {% endif %}
         {% endfor %}
     </div>
 </div>

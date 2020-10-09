@@ -736,15 +736,19 @@ nav{
 
 }
 .sponsorlogo{
-    background-image: url("../images/krispy-kreme-logo-1.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     height: 200px;
     width: 500px;
+    -webkit-filter:grayscale(100%) brightness(120%);
+    transition-duration:0.2s;
 }
-
+.sponsorlogo:hover{
+    -webkit-filter:grayscale(0);
+}
 .sponsors h2{
     font-family: SourceSans;
     color: rgb(29, 29, 29);
 }
+
