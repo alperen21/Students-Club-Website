@@ -752,3 +752,62 @@ nav{
     color: rgb(29, 29, 29);
 }
 
+.speakers{
+
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.center{
+    text-align: center;
+}
+
+.speaker{
+
+    flex-basis:29%;
+    background-color:whitesmoke;
+    padding:3%;
+    margin:2%;
+    color:rgb(109, 109, 109);
+    transition:0.5s;
+    -webkit-filter:grayscale(100%) brightness(120%);
+    transition-duration:0.5s;
+    text-align: center;
+
+}
+
+.source-sans-black{
+    font-family:SourceSansBlack;
+}
+.speaker:hover{
+    transform:scale(1.1);
+}
+
+.speaker-photo{
+
+    background-image: url("../images/matheus-ferrero-pg_WCHWSdT8-unsplash-1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    border-radius:50%;
+    margin:auto;
+
+}
+
+.speaker:hover{
+    -webkit-filter:grayscale(0);
+    color:rgb(32, 32, 32);
+}
+@media (max-width: 1000px) {
+    .speaker{
+        flex-basis:100%;
+    }
+    .sponsor-logo-wrapper{
+        margin-top:5%;
+        margin-bottom:5%;
+    }
+}

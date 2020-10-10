@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Event,MediaSponsor,MainSponsor, GoldSponsor,SilverSponsor,BronzeSponsor,MediaSponsor,ItemSponsor
+from .models import Event,MediaSponsor,MainSponsor, GoldSponsor,SilverSponsor,BronzeSponsor,MediaSponsor,ItemSponsor,Speaker
 
 # Create your views here.
 
@@ -14,6 +14,7 @@ def events(request):
 
 def event(request,id):
     event = get_object_or_404(Event,id=id)
+    speakers = event.Speaker.all()
     mainsponsors = event.MainSponsor.all()
     goldsponsors = event.GoldSponsor.all()
     silversponsors = event.SilverSponsor.all()
@@ -23,6 +24,7 @@ def event(request,id):
     
     context = {
         "event":event,
+        "speakers":speakers,
         "mainsponsors":mainsponsors,
         "goldsponsors":goldsponsors,
         "silversponsors":silversponsors,

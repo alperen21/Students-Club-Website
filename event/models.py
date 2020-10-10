@@ -82,7 +82,7 @@ class MediaSponsor(models.Model):
         return self.name + f" ({self.event.title})"
 
 class Speaker(models.Model):
-    event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="speaker")
+    event = models.ForeignKey(Event,on_delete=models.CASCADE,related_name="Speaker")
     name = models.CharField(max_length=50,verbose_name="Konuşmacının adı")
     bio = models.TextField(verbose_name="Konuşmacı hakkında bilgi")
     photo = models.FileField(blank=True,null=True,verbose_name="Konuşmacının resmi")
