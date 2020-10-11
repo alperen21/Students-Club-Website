@@ -22,4 +22,5 @@ app_name = "contacts"
 
 urlpatterns = [
     path('',views.contact,name="contact"),
+    path('/newmember',views.new_member,name="new member"),
 ] 

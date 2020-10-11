@@ -1,11 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
-<style>
-    .sponsor-logo{
-        background-image: url("../static/images/Python-logo.jpg");
-        padding:20%;
-    }
-</style>
+{% include "includes/header.html" %}
 <div class="event-intro-image" id="mail-bg">
     <h1>{{event.title}}</h1>
 </div>

@@ -26,3 +26,10 @@ def contact(request):
         "events":events,
     }
     return render(request,"contact.html",context)
+
+def new_member(request):
+    events = Event.objects.all()
+    context = {
+        "events":events,
+    }
+    return render(request,"new_member.html",context)
