@@ -142,6 +142,12 @@
 .footer-text{
     color:beige;
 }
+.question-list a{
+    color:whitesmoke;
+}
+.question-list a:hover{
+    text-decoration: none;
+}
 /* Navbar */
 
 .navbar-toggler{

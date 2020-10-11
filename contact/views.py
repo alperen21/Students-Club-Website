@@ -2,11 +2,13 @@ from django.shortcuts import render
 from contact.forms import contact_form
 from django.contrib import messages
 from .webmail import send_mail
+from event.models import Event
 
 
 
 # Create your views here.
 def contact(request):
+    events = Event.objects.all()
     form = contact_form(request.POST or None)
     if request.method == "POST":
 
@@ -21,5 +23,6 @@ def contact(request):
 
     context = {
         "contact_form":form,
+        "events":events,
     }
     return render(request,"contact.html",context)

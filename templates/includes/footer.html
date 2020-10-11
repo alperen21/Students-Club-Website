@@ -13,13 +13,27 @@
             <h3 class="footer-text">Sıkça Sorulan Sorular</h3>
             <br>
             <ul class="question-list">
-                <li class="list-item footer-text">GGK nedir?</li>
+                <li class="list-item">GGK nedir?</li>
                 <li class="list-item">Bizimle nasıl çalışabilirsiniz?</li>
                 <li class="list-item">Etkinliklerimize nasıl katılabilirsiniz?</li>
             </ul>
         </div>
         <div class="footer-section events footer-box">
             <h3 class="footer-text">Yakın Etkinlikler</h3>
+            <br>
+            <ul class="question-list">
+                {% if events %}
+                    {% for event in events %}
+                        {% if event.distinct_page %}
+                            <a href="{{event.distinct_page}}"><li class="list-item">{{event.title}}</li></a>
+                        {% else %}
+                            <a href="/events/{{event.id}}"><li class="list-item">{{event.title}}</li></a>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <p>Henüz yaklaşan bir etkinlik yok</p>
+                {% endif %}
+            </ul>
             <br>
         </div>
     </div>

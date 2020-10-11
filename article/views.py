@@ -9,20 +9,26 @@ from .models import Article
 from django.contrib import messages
 from django.contrib.auth import login,authenticate,logout
 from django.contrib.auth.decorators import login_required
-
+from event.models import Event
 # Create your views here.
 
 def Index(request):
-    return render(request,"index.html")
+    events = Event.objects.all()
+    context = {
+        "events":events,
+    }
+    return render(request,"index.html",context)
 
 def test(request):
     return render(request,"text.html")
 
 def login_user(request):
+    events = Event.objects.all()
     form = LoginForm(request.POST or None)
 
     context = {
         "form":form,
+        "events":events,
     }
 
     if form.is_valid():
@@ -49,9 +55,11 @@ def logout_user(request):
 def dashboard(request):
     articles = Article.objects.filter(author=request.user)
     form = ArticleForm(request.POST or None, request.FILES or None)
+    events = Event.objects.all()
     context = {
         "form":form,
         "articles":articles,
+        "events":events,
     }
     try:
         
@@ -72,20 +80,27 @@ def dashboard(request):
 
 @login_required(login_url="article:login")
 def panel(request):
-
-    return render(request,"panel.html")
+    events = Event.objects.all()
+    context = {
+        "events":event
+    }
+    return render(request,"panel.html",context)
 
 def blog(request):
     articles = Article.objects.all()
+    events = Event.objects.all()
     context = {
         "articles":articles,
+        "events":events,
     }
     return render(request,"blog.html",context)
 
 def article(request,id):
     article = get_object_or_404(Article,id=id)
+    events = Event.objects.all()
     context = {
         "article":article,
+        "events":events,
     }
     return render(request,"article.html",context)
 
