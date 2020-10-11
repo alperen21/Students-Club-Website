@@ -2,13 +2,20 @@
 <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <nav class="navbar navbarCollapse navbar-toggleable-md navbar-inverse fixed-top  navbar-custom">
-    <a class="navbar-brand" href="{% url 'index' %}"><img class = "logo" src="{% static 'images/GGK_logo-2.png' %}"></a>
+    <br>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="collapse navbar-collapse order-3 order-sm-2">
+
         <ul class="navbar-nav mr-auto">
+          <a class="navbar-brand" href="{% url 'index' %}"><img class = "logo" src="{% static 'images/GGK_logo-2.png' %}"></a>
+          <li class="nav-item mobile-nav-item">
+            <br>
+          </li>
+          <li class="nav-item mobile-nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Anasayfa</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Üye Ol</a>
           </li>
@@ -21,38 +28,47 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'article:blog' %}">Blog</a>
           </li>
-        </ul>
-      </div>
-      <ul class="navbar-nav ml-auto">
-          
           {% if request.user.is_authenticated %}
-          <li class="nav-item" id="navbar-user-active-1">
-            <a class="nav-link px-2 custom-icon" href="#"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li class="nav-item" id="navbar-user-active-2">
-            <a class="nav-link px-2 custom-icon" href="#"><i class="fa fa-instagram"></i></a>
-          </li>
-          <li class="nav-item" id="navbar-user-active-3">
-            <a class="nav-link px-2 custom-icon" href="#"><i class="fa fa-linkedin"></i></a>
-          </li>
-          <li class="nav-item" id="navbar-user-option-1">
-            <a href="{% url 'article:dashboard' %}" class="nav-link">{{request.user.username}}</a>
-          </li>
-          <li class="nav-item" id="navbar-user-option-2">
-            <a href="{% url 'article:logout' %}" class="nav-link">Çıkış</a>
-          </li>
-          {% else %}
           <li class="nav-item">
-            <a class="nav-link px-2 custom-icon" href="https://twitter.com/su_ggk"><i class="fa fa-twitter"></i></a>
+            <a href="{% url 'article:dashboard' %}" class="nav-link">Kullanıcı Kontrol Paneli</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-2 custom-icon" href="https://www.instagram.com/sabanciggk"><i class="fa fa-instagram"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-2 custom-icon" href="https://www.linkedin.com/company/18221543"><i class="fa fa-linkedin"></i></a>
+            <a href="{% url 'article:logout' %}" class="nav-link">Çıkış Yap</a>
           </li>
           {% endif %}
-      </ul>
+        </ul>
+      <div class="desktop-nav-item">
+        <ul class="navbar-nav ml-auto">
+            
+            {% if request.user.is_authenticated %}
+            <li class="nav-item" id="navbar-user-active-1">
+              <a class="nav-link px-2 custom-icon" href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="nav-item" id="navbar-user-active-2">
+              <a class="nav-link px-2 custom-icon" href="#"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li class="nav-item" id="navbar-user-active-3">
+              <a class="nav-link px-2 custom-icon" href="#"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="nav-item" id="navbar-user-option-1">
+              <a href="{% url 'article:dashboard' %}" class="nav-link">{{request.user.username}}</a>
+            </li>
+            <li class="nav-item" id="navbar-user-option-2">
+              <a href="{% url 'article:logout' %}" class="nav-link">Çıkış</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link px-2 custom-icon" href="https://twitter.com/su_ggk"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2 custom-icon" href="https://www.instagram.com/sabanciggk"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2 custom-icon" href="https://www.linkedin.com/company/18221543"><i class="fa fa-linkedin"></i></a>
+            </li>
+            {% endif %}
+        </ul>
+      </div>
       </ul>
     </div>
   </nav>

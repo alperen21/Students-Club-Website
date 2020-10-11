@@ -143,13 +143,22 @@
     color:beige;
 }
 /* Navbar */
+
+.navbar-toggler{
+    padding-top:none;
+    margin-top:none;
+    position:absolute;
+}
 .navbar-custom{
     background-color:#2d2725;
-  }
+    padding-top:none;
+    margin-top:none;
+}
   .logo{
     height:1em;
     padding-right:15%;
     padding-left:5%;
+    margin-top:15%;
     position: relative;
   }
   .custom-icon{
@@ -192,6 +201,31 @@ nav{
   position:absolute;
   left:87%;
 }
+.mobile-nav-item{
+    display:none;
+}
+@media (max-width: 1000px) {
+
+    .logo{
+        display:none;
+    }
+
+    .navbar-custom{
+        min-height:9%;
+    }
+
+    .mobile-nav-item{
+        display:block;
+    }
+
+    .desktop-nav-item{
+        display:none;
+    }
+
+
+
+}
+
 /* Contact */
 .contact-form-image{
     background-image: url("../images/markus-winkler-QFPtc0EGCtI-unsplash.jpg");
@@ -232,7 +266,17 @@ nav{
     .contact-box{
         width:90%;
         padding-left: 5%;
-    }   
+    }
+    .contact-form-image h1{
+        font-size: 10vw;
+    }
+    .contact-box h4{
+        font-size: 6vw;
+    }
+    .contact-form-image{
+        padding-top:50%;
+        padding-bottom:50%;
+    }
 }
 
 .contact-list{
@@ -554,11 +598,16 @@ nav{
 
 @media (max-width: 1000px) {
     #blog-intro {
-        padding-top:30%;
+        padding-top:60%;
+        padding-bottom:60%;
+    }
+    #blog-intro h1{
+        font-size:20vw;
     }
     .blog-image{
         display:None;
     }
+    
 }
 
 /*Blog:All Articles*/
@@ -715,6 +764,9 @@ nav{
     }
     .br-wrapper{
         display:none;
+    }
+    .event-intro-image h1{
+        font-size:10vw;
     }
 }
 /* Event */
