@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+{% block body %}
+{% include "includes/header.html" %}
+<div class="event-intro-image" id="mail-bg">
+    <h1>Destekçilerimiz</h1>
+</div>
+<br><br><br>
+<div class="sponsors">
+    {% if mainsponsors %}
+        <h2>Ana Sponsor</h2>
+        <hr>
+        <div class="sponsor">
+            {% for sponsor in mainsponsors %}
+                {% if sponsor.url %}
+                    <a href="{{sponsor.url}}">
+                        <div class="sponsor-logo-wrapper ana">
+                            <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <br><br><br>
+    {% endif %}
+    {% if goldsponsors %}
+        <h2>Altın Sponsorlar</h2>
+        <hr>
+        <div class="sponsor">
+        {% for sponsor in goldsponsors %}
+            {% if sponsor.url %}
+                <a href="{{sponsor.url}}">
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                </a>
+            {% else %}
+                <div class="sponsor-logo-wrapper ana">
+                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <br><br><br>
+    {% endif %}
+    {% if silversponsors %}
+        <h2>Gümüş Sponsorlar</h2>
+        <hr>
+        <div class="sponsor">
+            {% for sponsor in silversponsors %}
+                {% if sponsor.url %}
+                    <a href="{{sponsor.url}}">
+                        <div class="sponsor-logo-wrapper ana">
+                            <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <br><br><br>
+    {% endif %}
+    {% if bronzesponsors %}
+    <h2>Bronz Sponsorlar</h2>
+    <hr>
+    <div class="sponsor">
+        {% for sponsor in bronzesponsors %}
+            {% if sponsor.url %}
+                <a href="{{sponsor.url}}">
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                </a>
+            {% else %}
+                <div class="sponsor-logo-wrapper ana">
+                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <br><br><br>
+    {% endif %}
+    {% if itemsponsors %}
+        <h2>Ürün Sponsorları</h2>
+        <hr>
+        <div class="sponsor">
+            {% for sponsor in itemsponsors %}
+                {% if sponsor.url %}
+                    <a href="{{sponsor.url}}">
+                        <div class="sponsor-logo-wrapper ana">
+                            <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <br><br><br>
+    {% endif %}
+    {% if mediasponsors %}
+    <h2>Medya Sponsorları</h2>
+    <hr>
+    <div class="sponsor">
+        {% for sponsor in mediasponsors %}
+            {% if sponsor.url %}
+                <a href="{{sponsor.url}}">
+                    <div class="sponsor-logo-wrapper ana">
+                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                    </div>
+                </a>
+            {% else %}
+                <div class="sponsor-logo-wrapper ana">
+                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+<br><br><br>
+{% endblock body %}

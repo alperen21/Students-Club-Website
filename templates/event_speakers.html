@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+{% include "includes/header.html" %}
+<div class="event-intro-image" id="mail-bg">
+    <h1>Konuşmacılarımız</h1>
+</div>
+<br><br><br>
+{% if speakers %}
+<div class="speakers">
+    {% for speaker in speakers %}
+    <div class="speaker">
+        <div class="speaker-photo" style="background-image:url({{speaker.photo.url}});"></div>
+        <br>
+        <div class="speaker-name"><h5>{{speaker.name}}</h5></div>
+        <div class="speaker-bio">
+            <p>
+            {{speaker.bio}}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+<br><br><br>
+{% endblock body %}

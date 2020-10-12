@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block body %}
+{% include "includes/header.html" %}
+<style>
+    .join-wrapper{
+        display:flex;
+        flex-direction: row;
+    }
+    .join-element{
+        flex:1;
+        text-align: center;
+        padding-top: 5%;
+    }
+    .join-element h5 {
+        margin:5%;
+    }
+    #j1 {
+        background-color: #dc133b;
+        color:whitesmoke;
+    }
+    #j2 {
+        background-color: #2d4059;
+        color:white;
+    }
+    iframe{
+        margin:5%;
+        margin-bottom: 10%;
+    }
+    .join-button{
+        padding-left:7%;
+        padding-right:7%;
+        padding-top:4%;
+        padding-bottom:4%;
+    }
+    .center{
+        margin-top:15%;
+        margin-bottom:20%;
+    }
+    @media (max-width: 1000px) { 
+        .join-wrapper {
+
+            flex-direction: column;
+
+        }
+    }
+</style>
+<div class="event-intro-image" id="mail-bg">
+    <h1>Katıl</h1>
+</div>
+<div class="join-wrapper">
+    <div class="join-element" id="j1">
+        <h2>Yer ve Zaman</h2>
+        <p><h6><i class="fa fa-clock-o"></i> {{event.start_date}}</h6>
+            <h6><i class="fa fa-building"></i> {{event.location}}</h6>
+        </p>
+        <iframe src="{{event.iframe_url}}" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div class="join-element" id="j2">
+        <h2>Nasıl Katılabilirim?</h2>
+        {% if event.distinct_ticket %}
+            <br>
+            <h5>Katılmak için aşağıdaki butona tıklayarak bilet alabilirsin</h5>
+            <div class="center">
+                <br>
+                <a class="btn btn-info join-button" href="{{event.distinct_ticket}}"><h3>Bilet Al</h3></a>
+            </div>
+        {% else %}
+        <br>
+        <h5>Bu etkinliğe katılmak için etkinlik zamanında etkinlik alanında bulunman yeterli</h5>
+        {% endif %}
+    </div>
+</div>
+{% endblock body %}

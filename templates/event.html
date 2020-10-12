@@ -1,159 +1,20 @@
 {% extends "layout.html" %}
 {% block body %}
 {% include "includes/header.html" %}
+<style>
+
+
+</style>
 <div class="event-intro-image" id="mail-bg">
     <h1>{{event.title}}</h1>
 </div>
-<br><br><br>
-<div class="blog-entry">
+<div class="blog-entry event-description">
     <br>
+    <img src="{{event.poster.url}}" class="index-poster">
     <p>
         {{event.details|safe}}
     </p>
 </div>
-<br><br><br>
-<iframe src="{{event.iframe_url}}" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-<h3 class="center source-sans-black">Konuşmacılarımız</h3>
-<hr>
 <br>
-{% if speakers %}
-<div class="speakers">
-    {% for speaker in speakers %}
-    <div class="speaker">
-        <div class="speaker-photo" style="background-image:url({{speaker.photo.url}});"></div>
-        <br>
-        <div class="speaker-name"><h5>{{speaker.name}}</h5></div>
-        <div class="speaker-bio">
-            <p>
-            {{speaker.bio}}
-            </p>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-{% endif %}
-<br><br><br>
-<div class="sponsors">
-    {% if mainsponsors %}
-        <h2>Ana Sponsor</h2>
-        <hr>
-        <div class="sponsor">
-            {% for sponsor in mainsponsors %}
-                {% if sponsor.url %}
-                    <a href="{{sponsor.url}}">
-                        <div class="sponsor-logo-wrapper ana">
-                            <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                        </div>
-                    </a>
-                {% else %}
-                    <div class="sponsor-logo-wrapper ana">
-                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <br><br><br>
-    {% endif %}
-    {% if goldsponsors %}
-        <h2>Altın Sponsorlar</h2>
-        <hr>
-        <div class="sponsor">
-        {% for sponsor in goldsponsors %}
-            {% if sponsor.url %}
-                <a href="{{sponsor.url}}">
-                    <div class="sponsor-logo-wrapper ana">
-                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                    </div>
-                </a>
-            {% else %}
-                <div class="sponsor-logo-wrapper ana">
-                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                </div>
-            {% endif %}
-        {% endfor %}
-        </div>
-        <br><br><br>
-    {% endif %}
-    {% if silversponsors %}
-        <h2>Gümüş Sponsorlar</h2>
-        <hr>
-        <div class="sponsor">
-            {% for sponsor in silversponsors %}
-                {% if sponsor.url %}
-                    <a href="{{sponsor.url}}">
-                        <div class="sponsor-logo-wrapper ana">
-                            <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                        </div>
-                    </a>
-                {% else %}
-                    <div class="sponsor-logo-wrapper ana">
-                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <br><br><br>
-    {% endif %}
-    {% if bronzesponsors %}
-    <h2>Bronz Sponsorlar</h2>
-    <hr>
-    <div class="sponsor">
-        {% for sponsor in bronzesponsors %}
-            {% if sponsor.url %}
-                <a href="{{sponsor.url}}">
-                    <div class="sponsor-logo-wrapper ana">
-                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                    </div>
-                </a>
-            {% else %}
-                <div class="sponsor-logo-wrapper ana">
-                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-    <br><br><br>
-    {% endif %}
-    {% if itemsponsors %}
-        <h2>Ürün Sponsorları</h2>
-        <hr>
-        <div class="sponsor">
-            {% for sponsor in itemsponsors %}
-                {% if sponsor.url %}
-                    <a href="{{sponsor.url}}">
-                        <div class="sponsor-logo-wrapper ana">
-                            <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                        </div>
-                    </a>
-                {% else %}
-                    <div class="sponsor-logo-wrapper ana">
-                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <br><br><br>
-    {% endif %}
-    {% if mediasponsors %}
-    <h2>Medya Sponsorları</h2>
-    <hr>
-    <div class="sponsor">
-        {% for sponsor in mediasponsors %}
-            {% if sponsor.url %}
-                <a href="{{sponsor.url}}">
-                    <div class="sponsor-logo-wrapper ana">
-                        <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                    </div>
-                </a>
-            {% else %}
-                <div class="sponsor-logo-wrapper ana">
-                    <div class="sponsorlogo" style="background-image:url({{sponsor.logo.url}});"></div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-{% endif %}
-<br><br><br>
 
 {% endblock body %}

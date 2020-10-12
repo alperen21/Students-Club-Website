@@ -11,8 +11,27 @@
 </style>
 
 <div class="jumbotron header">
-    <div class="header-option"><h3><a href="#">Etkinlik</a></h3></div>
-    <div class="header-option"><h3><a href="#">Sponsorlarımız</a></h3></div>
-    <div class="header-option"><h3><a href="#">Konuşmacılarımız</a></h3></div>
-    <div class="header-option"><h3><a href="#">Katıl</a></h3></div>
+    <div class="header-option"><h3><a href="/events/{{event.id}}">{{event.title}}</a></h3></div>
+    {% if mainsponsors %}
+    <div class="header-option"><h3><a href="/events/{{event.id}}/sponsors">Sponsorlarımız</a></h3></div>
+    {% else %}
+        {% if goldsponsors %}
+            <div class="header-option"><h3><a href="/events/{{event.id}}/sponsors">Sponsorlarımız</a></h3></div>
+        {% else %}
+            {% if silversponsors %}
+                <div class="header-option"><h3><a href="/events/{{event.id}}/sponsors">Sponsorlarımız</a></h3></div>
+            {% else %}
+                {% if bronzesponsors %}
+                    <div class="header-option"><h3><a href="/events/{{event.id}}/sponsors">Sponsorlarımız</a></h3></div>
+                {% else %}
+                    {% if itemsponsors %}
+                        <div class="header-option"><h3><a href="/events/{{event.id}}/sponsors">Sponsorlarımız</a></h3></div>
+                    {% else %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+    <div class="header-option"><h3><a href="/events/{{event.id}}/speakers">Konuşmacılarımız</a></h3></div>
+    <div class="header-option"><h3><a href="/events/{{event.id}}/join">Katıl</a></h3></div>
 </div>
