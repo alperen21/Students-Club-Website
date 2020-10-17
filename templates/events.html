@@ -28,7 +28,7 @@
             {% if event.distinct_ticket %}
                 <a class="btn btn-info" href="{{event.distinct_ticket}}">Katıl</a>
             {% else %}
-                <a class="btn btn-info" href="#">Katıl</a>
+                <a class="btn btn-info" href="/events/{{event.id}}/join">Katıl</a>
             {% endif %}
             {% if event.distinct_page %}
                 <a class="btn btn-info" href="{{event.distinct_page}}">Daha Fazla Bilgi Al</a>

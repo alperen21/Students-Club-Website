@@ -10,12 +10,20 @@ from django.contrib import messages
 from django.contrib.auth import login,authenticate,logout
 from django.contrib.auth.decorators import login_required
 from event.models import Event
+from contact.forms import mail_list_form
 # Create your views here.
 
 def Index(request):
     events = Event.objects.all()
+    form = mail_list_form(request.POST or None)
+    articles = Article.objects.all()[:3]
+    if request.method == "POST":
+        email = request.POST.get("email")
+
     context = {
         "events":events,
+        "form":form,
+        "articles":articles,
     }
     return render(request,"index.html",context)
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from contact.forms import contact_form
+from contact.forms import contact_form,new_member_form
 from django.contrib import messages
 from .webmail import send_mail
 from event.models import Event
@@ -29,7 +29,19 @@ def contact(request):
 
 def new_member(request):
     events = Event.objects.all()
+    form = new_member_form(request.POST or None)
+    if request.method == "POST":
+
+        email = request.POST.get("email")
+        name = request.POST.get("name")
+        number = request.POST.get("number")
+
+        if send_mail(email,body,name):
+            messages.success(request,"Mesajınız başarıyla alındı")
+        else:
+            messages.info(request,"Bir sorun çıktı")
     context = {
         "events":events,
+        "form":form,
     }
     return render(request,"new_member.html",context)

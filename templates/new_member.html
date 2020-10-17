@@ -1,4 +1,136 @@
 {% extends "layout.html" %}
 {% load crispy_forms_tags %}
 {% block body %}
+<style>
+    .join-wrapper{
+        display:flex;
+        flex-direction: row;
+    }
+    .join-element{
+        flex:1;
+        text-align: center;
+        padding-top: 5%;
+    }
+    .join-element h5 {
+        margin:5%;
+    }
+    #j1 {
+        background-color: #dc133b;
+        color:whitesmoke;
+    }
+    #j2 {
+        background-color: #2d4059;
+        color:white;
+    }
+    iframe{
+        margin:5%;
+        margin-bottom: 10%;
+    }
+    .join-button{
+        padding-left:7%;
+        padding-right:7%;
+        padding-top:4%;
+        padding-bottom:4%;
+    }
+    .center{
+        margin-top:15%;
+        margin-bottom:20%;
+    }
+    @media (max-width: 1000px) { 
+        .join-wrapper {
+
+            flex-direction: column;
+
+        }
+    }
+    .gray-box{
+        font-family: SourceSans;
+        color:whitesmoke;
+        background-color:rgb(41, 41, 46);
+        margin:none;
+        padding:5%;
+        text-align:center;
+    }
+
+</style>
+<div class="contact-form-image" id="mail-bg">
+    <h1>Üye Ol</h1>
+</div>
+{% if messages %}  
+    {% for message in messages %}
+        {% if message.tags == "info" %}
+            <br>
+            <div class="alert alert-danger">
+                    {{ message }}
+            </div>
+        {% else %}
+            <br>
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<div class="gray-box">
+    <h2>Nasıl Katılabilirim?</h2>
+    <p>Katılımcı veya aktif üye olabilirsin</p>
+</div>
+<div class="join-wrapper">
+    <div class="join-element text-element" id="j1">
+        <h2>Katılımcı</h2>
+        <br>
+        <hp>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aperiam, iste iusto ipsam itaque dignissimos facilis eius sequi voluptas aliquid ullam, perspiciatis recusandae, sit aliquam modi minima quibusdam architecto repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quisquam commodi rerum nemo fugit id minima aliquam cum assumenda, nesciunt ad velit inventore a ut quas dolor debitis. Delectus, error. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate dolorum aperiam id necessitatibus itaque consequuntur mollitia quod a doloribus quidem. Dolores, et at molestiae minima sint blanditiis omnis nisi quasi.</p>
+    </div>
+    <div class="join-element text-element" id="j2">
+        <h2>Aktif Üye</h2>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aperiam, iste iusto ipsam itaque dignissimos facilis eius sequi voluptas aliquid ullam, perspiciatis recusandae, sit aliquam modi minima quibusdam architecto repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quisquam commodi rerum nemo fugit id minima aliquam cum assumenda, nesciunt ad velit inventore a ut quas dolor debitis. Delectus, error. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate dolorum aperiam id necessitatibus itaque consequuntur mollitia quod a doloribus quidem. Dolores, et at molestiae minima sint blanditiis omnis nisi quasi.</p>
+    </div>
+</div>
+<div id="member-image"></div>
+<div class="gray-box">
+    <h2>Hangi Departman?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aperiam, iste iusto ipsam itaque dignissimos facilis eius sequi voluptas aliquid ullam, perspiciatis recusandae, sit aliquam modi minima quibusdam architecto repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quisquam commodi rerum nemo fugit id minima aliquam cum assumenda, nesciunt ad velit inventore a ut quas dolor debitis. Delectus, error. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate dolorum aperiam id necessitatibus itaque consequuntur mollitia quod a doloribus quidem. Dolores, et at molestiae minima sint blanditiis omnis nisi quasi.
+    </p>
+</div>
+<div class="departments">
+    <div class="department">
+        <h3>Sponsorluk</h3><i class="fas fa-money-bill-wave"></i>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aperiam, iste iusto ipsam itaque dignissimos facilis eius sequi voluptas aliquid ullam, perspiciatis recusandae, sit aliquam modi minima quibusdam architecto repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quisquam commodi rerum nemo fugit id minima aliquam cum assumenda, nesciunt ad velit inventore a ut quas dolor debitis. Delectus, error. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate dolorum aperiam id necessitatibus itaque consequuntur mollitia quod a doloribus quidem. Dolores, et at molestiae minima sint blanditiis omnis nisi quasi.
+        </p>
+        
+    </div>
+    <div class="department">
+        <h3>Organizasyon</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aperiam, iste iusto ipsam itaque dignissimos facilis eius sequi voluptas aliquid ullam, perspiciatis recusandae, sit aliquam modi minima quibusdam architecto repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quisquam commodi rerum nemo fugit id minima aliquam cum assumenda, nesciunt ad velit inventore a ut quas dolor debitis. Delectus, error. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate dolorum aperiam id necessitatibus itaque consequuntur mollitia quod a doloribus quidem. Dolores, et at molestiae minima sint blanditiis omnis nisi quasi.
+        </p>
+    </div>
+    <div class="department">
+        <h3>Marketing</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aperiam, iste iusto ipsam itaque dignissimos facilis eius sequi voluptas aliquid ullam, perspiciatis recusandae, sit aliquam modi minima quibusdam architecto repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quisquam commodi rerum nemo fugit id minima aliquam cum assumenda, nesciunt ad velit inventore a ut quas dolor debitis. Delectus, error. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate dolorum aperiam id necessitatibus itaque consequuntur mollitia quod a doloribus quidem. Dolores, et at molestiae minima sint blanditiis omnis nisi quasi.
+    </div>
+</div>
+<div id="member-image"></div>
+<div id="about-container">
+    <div id="about-box" class="about-title">
+        <h3>Üye Ol</h3>
+        <br>
+        <form method="post" class="mail-form member-form">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button type=”submit” class="btn btn-danger mail-list-button">Katıl</button>
+        </form>
+    </div>
+    <div id="about-box" class="about-text">
+        <div class="icon"></div>
+    </div>
+</div>
+<div id="mobile-about">
+    <form method="post" class="mail-form mail-form-mobile">
+        <h5>Üye Ol</h5>
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type=”submit” class="btn btn-info mail-list-button col-md-12 text-center">Katıl</button>
+    </form>
+</div>
 {% endblock body %}

@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block body %}
+{% load crispy_forms_tags %}
 
 <!--Introduction-->
 <div id="intro-container">
@@ -43,5 +44,27 @@
         <h1>0</h1>
         <p>Konuşmacı</p>
     </div>
+</div>
+<div id="about-container">
+    <div id="about-box" class="about-title">
+        <h3>Mail Listemize Katıl</h3>
+        <br>
+        <form method="post" class="mail-form">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button type=”submit” class="btn btn-danger mail-list-button">Katıl</button>
+        </form>
+    </div>
+    <div id="about-box" class="about-text">
+        <div class="icon"></div>
+    </div>
+</div>
+<div id="mobile-about">
+    <form method="post" class="mail-form mail-form-mobile">
+        <h5>Mail Listemize Katıl</h5>
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type=”submit” class="btn btn-info mail-list-button col-md-12 text-center">Katıl</button>
+    </form>
 </div>
 {% endblock body %}
