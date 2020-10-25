@@ -5,9 +5,59 @@
         background-color: whitesmoke;
     }
 </style>
+
+{% if events %}
+
+<div id="blog-intro" class="event-blog">
+    <h1 class="blog-text">{{events.0.title}}</h1>
+    <br>
+    <h3>Bu heyecan verici etkinliğe katılmak için hemen tıkla</h3>
+    {% if event.distinct_ticket %}
+        <a class="btn btn-info" href="{{events.0.distinct_ticket}}">Katıl</a>
+    {% else %}
+        <a class="btn btn-info" href="/events/{{events.0.id}}/join">Katıl</a>
+    {% endif %}
+
+    {% if event.distinct_page %}
+        <a class="btn btn-info" href="{{events.0.distinct_page}}">Daha Fazla Bilgi Al</a>
+    {% else %}
+        <a class="btn btn-info" href="/events/{{events.0.id}}">Daha Fazla Bilgi Al</a>
+    {% endif %}
+    
+</div>
+
+<div class="twitter-flex">
+    <div id="tf1">
+        <br>
+        <h2>Genç Girişimciler Ne Diyor?</h2>
+        <br>
+        <a class="twitter-timeline" data-width="450" data-height="300" href="https://twitter.com/su_ggk?ref_src=twsrc%5Etfw">Tweets by su_ggk</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div id="tf2">
+        <br>
+        {% if request.user.is_authenticated %}
+            <h2>Hoş geldin {{request.user}}</h2>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, quidem eaque doloremque aut a, dolorem sapiente explicabo qui consequuntur eius dolores illo esse dicta totam doloribus hic itaque, sunt odio.</p>
+            <a href="{% url 'contacts:new member' %}" class="btn btn-danger">Makale Ekle</a>
+            <a class = "btn btn-danger" href="{% url 'contacts:contact' %}">Çıkış Yap</a>
+        {% else %}
+            <h2>Sen de bizimle yaz!</h2>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, quidem eaque doloremque aut a, dolorem sapiente explicabo qui consequuntur eius dolores illo esse dicta totam doloribus hic itaque, sunt odio.</p>
+            <a href="{% url 'contacts:new member' %}" class="btn btn-danger">Giriş Yap</a>
+            <a class = "btn btn-danger" href="{% url 'contacts:contact' %}">Yazar Ol</a>
+        {% endif %}
+    </div>
+</div>
+
+{% else %}
 <div id="blog-intro">
     <h1 class="blog-text">Blog</h1>
 </div>
+
+{% endif %}
+
 
 {% if articles %}
 <br><br><br>

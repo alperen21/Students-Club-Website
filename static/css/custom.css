@@ -630,11 +630,31 @@ nav{
     background-attachment: fixed;
 
 }
+
+.event-blog {
+    background-image: url("../images/jr-korpa-DXD3o-HOh98-unsplash.jpg") !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#blog-intro > * {
+    color:white;
+}
+#blog-intro > h3 {
+    font-family:SourceSans;
+}
+
 .blog-text {
     color:White;
     font-family: Lobster;
     font-size: 9vw;
 }
+
+.event-blog .blog-text{
+    font-family: SourceSansBlack;
+}
+
 .blog-entry{
     padding-left: 20%;
     padding-right: 20%;
@@ -656,9 +676,13 @@ nav{
         padding-top:60%;
         padding-bottom:60%;
     }
+    .event-blog .blog-text{
+        font-size:10vw !important;
+    }
     #blog-intro h1{
         font-size:20vw;
     }
+
     .blog-image{
         display:None;
     }
@@ -667,6 +691,29 @@ nav{
 
 
 /*Blog:All Articles*/
+
+.twitter-flex{
+    display:flex;
+    justify-content: space-around;
+}
+
+.twitter-flex div{
+    width:50%;
+    text-align: center;
+    font-family:SourceSans;
+    color:white;
+    padding:5%;
+}
+
+
+#tf1{
+    background-color: #2d4059;
+
+}
+
+#tf2{
+    background-color: #141c25;
+}
 
 .all-articles-layout{
     display:flex;
@@ -699,6 +746,13 @@ nav{
         transform:none;
     }
 
+    .twitter-flex{
+        flex-direction: column;
+    }
+    .twitter-flex div{
+        width:100%;
+        padding:15%;
+    }
 }
 .article-preview h3{
     font-family: SourceSansBlack;
