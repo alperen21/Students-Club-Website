@@ -10,7 +10,7 @@ I used Django combined with Bootstrap to create the website. Even though this pr
 Especially since I decided to completely change the design mid-development because of the feedback I got.
 
 
-##Demo
+## Demo
 
 After the development phase is over, we will need to contact the school administration in order to receive funding and permissions to deploy the website.
 So, in order to show what the website actually looks like, I am including a link to a video in which I locally host the website for demo purposes.
@@ -19,7 +19,7 @@ So, in order to show what the website actually looks like, I am including a link
 https://drive.google.com/drive/folders/1GN0vfa6lt_wTBiQp8hMswGLD3mfkZ27q?usp=sharing
 
 
-##Features
+## Features
 
 The website is intended to be used for long term. Since not everyon in the upcoming generations of the club will be Computer Science majors, 
 I intended the website to be completely manageable by someone with no programing knowledge.
