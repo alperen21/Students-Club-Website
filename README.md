@@ -1,6 +1,6 @@
-# club
+# Website for Students' Club
 
-Hello, I am a board member of the students' club known as "Young Entrepreneurs' Club" (Genç Girişimciler Kulübü in Turkish). 
+Hello, I am a board member of the students' club known as "Young Entrepreneurs' Club" (Genç Girişimciler Kulübü in Turkish) and also a Sophomore Computer Science student. 
 While spending time within this club I came to realize that the club lacked a proper website, so I decided to create one from stratch.
 
 
